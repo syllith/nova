@@ -1,0 +1,261 @@
+BEGIN_OPTIONS
+   ShaderName "Hidden/Better Lit/Dev/StackableTerrainAlignedDetail"
+   CustomEditor "JBooth.BetterShaders.BetterShaderMaterialGUI"
+   SubEditor "StackableTerrainAlignedDetailEditor"
+END_OPTIONS
+
+BEGIN_SUBSHADERS
+   "FunctionLibrary.surfshader"
+END_SUBSHADERS
+
+BEGIN_PROPERTIES
+    [HideInInspector] _TerrainHeightProvided("Terrain Height Provided to shader", Float) = 0
+    [HideInInspector] _TerrainAlbedoProvided("Blend with Albedo Shader", Float) = 0
+
+    [HideInInspector]_TerrainHeightC("Terrain", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightL("TerrainL", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightR("TerrainR", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightU("TerrainU", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightUL("TerrainUL", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightUR("TerrainUR", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightB("TerrainB", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightBL("TerrainBL", 2D) = "black" {}
+    [HideInInspector]_TerrainHeightBR("TerrainBR", 2D) = "black" {}
+
+    [HideInInspector]_TerrainSize("Terrain Size", Vector) = (0,0,0,0)
+    [HideInInspector]_TerrainPosition("Terrain Position", Vector) = (0,0,0,0)
+    _TerrainYOffset("Y Offset", Float) = 0
+
+    _TerrainBlendHeight("Terrain Blend Height", Float) = 0.2
+    [HideInInspector]_TerrainAlbedoC("Terrain", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoL("TerrainL", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoR("TerrainR", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoU("TerrainU", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoUL("TerrainUL", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoUR("TerrainUR", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoB("TerrainB", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoBL("TerrainBL", 2D) = "black" {}
+    [HideInInspector]_TerrainAlbedoBR("TerrainBR", 2D) = "black" {}
+END_PROPERTIES
+
+BEGIN_CBUFFER
+    float3 _TerrainSize;
+    float3 _TerrainPosition;
+    float _TerrainYOffset;
+    float _TerrainBlendHeight;
+    float _TerrainHeightProvided;
+    float _TerrainAlbedoProvided;
+END_CBUFFER
+
+BEGIN_DEFINES
+    #pragma shader_feature_local _ _TERRAINALIGNEDDETAIL
+    #pragma shader_feature_local _ _TERRAINBLENDALBEDO_TINT
+    #pragma shader_feature_local _ _TERRAINBLENDALBEDO_HEIGHTTINT 
+END_DEFINES
+
+BEGIN_CODE
+
+    TEXTURE2D(_TerrainHeightC);
+    TEXTURE2D(_TerrainHeightL);
+    TEXTURE2D(_TerrainHeightR);
+    TEXTURE2D(_TerrainHeightU);
+    TEXTURE2D(_TerrainHeightUL);
+    TEXTURE2D(_TerrainHeightUR);
+    TEXTURE2D(_TerrainHeightB);
+    TEXTURE2D(_TerrainHeightBL);
+    TEXTURE2D(_TerrainHeightBR);
+    TEXTURE2D(_TerrainAlbedoC);
+    TEXTURE2D(_TerrainAlbedoL);
+    TEXTURE2D(_TerrainAlbedoR);
+    TEXTURE2D(_TerrainAlbedoU);
+    TEXTURE2D(_TerrainAlbedoUL);
+    TEXTURE2D(_TerrainAlbedoUR);
+    TEXTURE2D(_TerrainAlbedoB);
+    TEXTURE2D(_TerrainAlbedoBL);
+    TEXTURE2D(_TerrainAlbedoBR);
+
+    float4 _TerrainHeightC_TexelSize;
+
+
+    float GetWorldHeight(float2 worldUV)
+    {
+        float worldH = 0;
+
+        UNITY_BRANCH
+        if (worldUV.x < 0)
+        {
+            worldUV.x += 1;
+            UNITY_BRANCH
+            if (worldUV.y > 1)
+            {
+                worldUV.y -= 1;
+                worldH = UnpackHeightmap(_TerrainHeightUL.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+            else if (worldUV.y < 0)
+            {
+                worldUV.y += 1;
+                worldH = UnpackHeightmap(_TerrainHeightBL.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+            else
+            {
+                worldH = UnpackHeightmap(_TerrainHeightL.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+        }
+        else if (worldUV.x > 1)
+        {
+            worldUV.x -= 1;
+            UNITY_BRANCH
+            if (worldUV.y > 1)
+            {
+                worldUV.y -= 1;
+                worldH = UnpackHeightmap(_TerrainHeightUR.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+            else if (worldUV.y < 0)
+            {
+                worldUV.y += 1;
+                worldH = UnpackHeightmap(_TerrainHeightBR.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+            else
+            {
+                worldH = UnpackHeightmap(_TerrainHeightR.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }  
+        }
+        else
+        {
+            UNITY_BRANCH
+            if (worldUV.y > 1)
+            {
+                worldUV.y -= 1;
+                worldH = UnpackHeightmap(_TerrainHeightU.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+            else if (worldUV.y < 0)
+            {
+                worldUV.y += 1;
+                worldH = UnpackHeightmap(_TerrainHeightB.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            }
+            else
+            {
+                worldH = UnpackHeightmap(_TerrainHeightC.SampleLevel(shared_linear_clamp_sampler, worldUV, 0));
+            } 
+        }
+        worldH *= _TerrainSize.y * 2;
+        return worldH;
+    }
+
+    half4 GetWorldAlbedo(float2 worldUV)
+    {
+        half4 worldAlbedo = 0;
+
+        UNITY_BRANCH
+        if (worldUV.x < 0)
+        {
+            worldUV.x += 1;
+            UNITY_BRANCH
+            if (worldUV.y > 1)
+            {
+                worldUV.y -= 1;
+                worldAlbedo = _TerrainAlbedoUL.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+            else if (worldUV.y < 0)
+            {
+                worldUV.y += 1;
+                worldAlbedo = _TerrainAlbedoBL.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+            else
+            {
+                worldAlbedo = _TerrainAlbedoL.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+        }
+        else if (worldUV.x > 1)
+        {
+            worldUV.x -= 1;
+            UNITY_BRANCH
+            if (worldUV.y > 1)
+            {
+                worldUV.y -= 1;
+                worldAlbedo = _TerrainAlbedoUR.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+            else if (worldUV.y < 0)
+            {
+                worldUV.y += 1;
+                worldAlbedo = _TerrainAlbedoBR.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+            else
+            {
+                worldAlbedo = _TerrainAlbedoR.Sample(shared_linear_clamp_sampler, worldUV);
+            }  
+        }
+        else
+        {
+            UNITY_BRANCH
+            if (worldUV.y > 1)
+            {
+                worldUV.y -= 1;
+                worldAlbedo = _TerrainAlbedoU.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+            else if (worldUV.y < 0)
+            {
+                worldUV.y += 1;
+                worldAlbedo = _TerrainAlbedoB.Sample(shared_linear_clamp_sampler, worldUV);
+            }
+            else
+            {
+                worldAlbedo = _TerrainAlbedoC.Sample(shared_linear_clamp_sampler, worldUV);
+            } 
+        }
+        return worldAlbedo;
+    }
+
+
+    void ModifyVertex(inout VertexData v, inout ExtraV2F d)
+	{
+        #if _TERRAINALIGNEDDETAIL
+            if (_TerrainHeightProvided > 0)
+            {
+                float3 vertLocal = v.vertex.xyz;
+                float3 worldSpacePosition = TransformObjectToWorld(vertLocal).xyz;
+                float2 worldUV = (worldSpacePosition.xz + _TerrainPosition.xz * -1) / _TerrainSize.xz;
+
+                float4 recipSize = _TerrainHeightC_TexelSize;
+                recipSize.zw = (1.0f / (_TerrainHeightC_TexelSize.zw-1));
+                worldUV = (worldUV / recipSize.zw + 0.5f) * recipSize.xy;
+
+                float worldH = GetWorldHeight(worldUV);
+
+	            vertLocal.y += TransformWorldToObject(float4(0, worldH, 0, 1)).y + _TerrainYOffset;
+                v.vertex.xyz = vertLocal;
+            }
+        #endif
+    }
+
+    void SurfaceFunction(inout Surface o, ShaderData d)
+    {
+        #if _TERRAINBLENDALBEDO_TINT
+            
+            #if _TERRAINBLENDALBEDO_HEIGHTTINT
+            if (_TerrainAlbedoProvided > 0 && _TerrainHeightProvided > 0)
+            {
+                float2 worldUV = (d.worldSpacePosition.xz + _TerrainPosition.xz * -1) / _TerrainSize.xz;
+                float3 worldAlbedo = GetWorldAlbedo(worldUV).xyz;
+                float4 recipSize = _TerrainHeightC_TexelSize;
+                recipSize.zw = (1.0f / (_TerrainHeightC_TexelSize.zw-1));
+                worldUV = (worldUV / recipSize.zw + 0.5f) * recipSize.xy;
+                float worldH = GetWorldHeight(worldUV) + _TerrainYOffset;
+                float blend = saturate((d.worldSpacePosition.y - worldH) * 1.0 / max(_TerrainBlendHeight, 0.001)); 
+                
+                o.Albedo = lerp(o.Albedo * worldAlbedo, o.Albedo, blend);
+            }
+            #else
+            if (_TerrainAlbedoProvided > 0)
+            {
+                float2 worldUV = (d.worldSpacePosition.xz + _TerrainPosition.xz * -1) / _TerrainSize.xz;
+                o.Albedo *= GetWorldAlbedo(worldUV).xyz;
+            }
+            #endif
+        #endif
+    }
+
+
+
+END_CODE
+

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6639359bd66f347beb8aa63f7c5a0ae4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - noiseTexture: {fileID: 2800000, guid: 70636ffc440b14476a876a891d43d0a9, type: 3}
+  - gustTexture: {fileID: 2800000, guid: 2299ba6617a324b73a0b08201fb54b65, type: 3}
+  - point1: {instanceID: 0}
+  - point2: {instanceID: 0}
+  - point3: {instanceID: 0}
+  - point4: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
