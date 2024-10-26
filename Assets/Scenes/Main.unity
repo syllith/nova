@@ -348,6 +348,216 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthText: {fileID: 1264850927}
+--- !u!1 &274770900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274770904}
+  - component: {fileID: 274770903}
+  - component: {fileID: 274770902}
+  - component: {fileID: 274770901}
+  m_Layer: 3
+  m_Name: Cube (12)
+  m_TagString: Metal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &274770901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274770900}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &274770902
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274770900}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &274770903
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274770900}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &274770904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274770900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 32.44}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &355647885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355647889}
+  - component: {fileID: 355647888}
+  - component: {fileID: 355647887}
+  - component: {fileID: 355647886}
+  m_Layer: 3
+  m_Name: Cube (14)
+  m_TagString: Rock
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &355647886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355647885}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &355647887
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355647885}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &355647888
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355647885}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &355647889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355647885}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 55.22}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &368594369
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +659,111 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.62, y: 0.487, z: 8.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &376664047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376664051}
+  - component: {fileID: 376664050}
+  - component: {fileID: 376664049}
+  - component: {fileID: 376664048}
+  m_Layer: 3
+  m_Name: Cube (15)
+  m_TagString: Sand
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &376664048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376664047}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &376664049
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376664047}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &376664050
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376664047}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &376664051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376664047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 66.2}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1022,6 +1337,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &776691265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776691269}
+  - component: {fileID: 776691268}
+  - component: {fileID: 776691267}
+  - component: {fileID: 776691266}
+  m_Layer: 3
+  m_Name: Cube (16)
+  m_TagString: Snow
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &776691266
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776691265}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &776691267
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776691265}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &776691268
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776691265}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &776691269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776691265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 78}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1505,7 @@ GameObject:
   - component: {fileID: 851606477}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: DirtyGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1533,6 +1953,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1004055872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004055876}
+  - component: {fileID: 1004055875}
+  - component: {fileID: 1004055874}
+  - component: {fileID: 1004055873}
+  m_Layer: 3
+  m_Name: Cube (19)
+  m_TagString: Wood
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1004055873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004055872}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1004055874
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004055872}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1004055875
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004055872}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1004055876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004055872}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 114.08}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017020880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +2090,216 @@ Transform:
   - {fileID: 1724503834}
   m_Father: {fileID: 2107350537}
   m_LocalEulerAnglesHint: {x: 4.28, y: -180, z: 0}
+--- !u!1 &1024286598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024286602}
+  - component: {fileID: 1024286601}
+  - component: {fileID: 1024286600}
+  - component: {fileID: 1024286599}
+  m_Layer: 3
+  m_Name: Cube (20)
+  m_TagString: Water
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1024286599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024286598}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1024286600
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024286598}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1024286601
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024286598}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1024286602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024286598}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 126.2}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1117017910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1117017914}
+  - component: {fileID: 1117017913}
+  - component: {fileID: 1117017912}
+  - component: {fileID: 1117017911}
+  m_Layer: 3
+  m_Name: Cube (17)
+  m_TagString: Tile
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1117017911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117017910}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1117017912
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117017910}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1117017913
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117017910}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1117017914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117017910}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 91.3}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1127728266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,6 +3004,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264850925}
   m_CullTransparentMesh: 1
+--- !u!1 &1326798124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326798128}
+  - component: {fileID: 1326798127}
+  - component: {fileID: 1326798126}
+  - component: {fileID: 1326798125}
+  m_Layer: 3
+  m_Name: Cube (18)
+  m_TagString: Gravel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1326798125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326798124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1326798126
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326798124}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1326798127
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326798124}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1326798128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326798124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 102.28}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418718407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +3557,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614712441}
   m_Mesh: {fileID: -2432090755550338912, guid: 72c99bebaa27b8c44bc284db2eb99320, type: 3}
+--- !u!1 &1701293780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1701293784}
+  - component: {fileID: 1701293783}
+  - component: {fileID: 1701293782}
+  - component: {fileID: 1701293781}
+  m_Layer: 3
+  m_Name: Cube (11)
+  m_TagString: Grass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1701293781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701293780}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1701293782
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701293780}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1701293783
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701293780}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1701293784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701293780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 21.46}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1724503833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,23 +3708,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de22c5c547fc427478db45fa77e0c591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponAnimator: {fileID: 8353516587847416551}
-  gunshotSound: {fileID: 8300000, guid: ea7ffebf1e5b4254ebe6803cb34ae35d, type: 3}
-  reloadSound: {fileID: 8300000, guid: 1990d5c1527a9ca47a861cdbc4c5d191, type: 3}
-  emptyClickSound: {fileID: 8300000, guid: 4bfff6c3689f7a94782dec73ad18fc86, type: 3}
-  muzzleFlash: {fileID: 1179400890}
-  muzzleLight: {fileID: 403011179}
-  swayObject: {fileID: 1017020880}
-  damage: 60
-  playerController: {fileID: 613042819}
-  shellCasingPrefab: {fileID: 8436466086233908069, guid: ef097bc182a1ee044bba7eafcacf42d1,
-    type: 3}
-  shellEjectionPoint: {fileID: 1614712442}
-  shellEjectionForce: 4
-  crosshairManager: {fileID: 1964917080}
-  adsSpeed: 15
-  adsZoomAmount: 10
-  adsZoomSpeed: 15
+  setup:
+    weaponAnimator: {fileID: 8353516587847416551}
+    gunshotSound: {fileID: 8300000, guid: ea7ffebf1e5b4254ebe6803cb34ae35d, type: 3}
+    reloadSound: {fileID: 8300000, guid: 1990d5c1527a9ca47a861cdbc4c5d191, type: 3}
+    emptyClickSound: {fileID: 8300000, guid: 4bfff6c3689f7a94782dec73ad18fc86, type: 3}
+    muzzleFlash: {fileID: 1179400890}
+    muzzleLight: {fileID: 403011179}
+    swayObject: {fileID: 1017020880}
+    slideObject: {fileID: 2503930645944108573}
+    damage: 60
+    playerController: {fileID: 613042819}
+    shellCasingPrefab: {fileID: 8436466086233908069, guid: ef097bc182a1ee044bba7eafcacf42d1,
+      type: 3}
+    shellEjectionPoint: {fileID: 1614712442}
+    shellEjectionForce: 3.3
+    crosshairManager: {fileID: 1964917080}
+  ads:
+    adsSpeed: 15
+    adsZoomAmount: 10
+    adsZoomSpeed: 15
+    aimPosition: {x: 0.2277, y: 0.0755, z: 0.0999}
+    aimRotation: {x: -0.03834419, y: -0.0004358978, z: -0.00001672645, w: 0.9992645}
   swaySettings:
     intensity: 0.1
     smooth: 10
@@ -2800,27 +3750,38 @@ MonoBehaviour:
     verticalBobAmount: 0.0001
     horizontalBobAmount: 0.0001
     rotationalBobAmount: 0.0001
-  aimPosition: {x: 0.2277, y: 0.0755, z: 0.0999}
-  aimRotation: {x: -0.03834419, y: -0.0004358978, z: -0.00001672645, w: 0.9992645}
-  fovChangeAmountADS: 0.5
-  fovChangeAmountHipFire: 1
-  fovChangeSpeedShared: 5
-  maxAmmoInMagazine: 7
-  maxTotalAmmo: 100
-  range: 100
-  baseAccuracyHip: 3
-  baseAccuracyADS: 2
-  recoilPenaltyHip: 1
-  recoilPenaltyADS: 0.5
-  recoilResetTime: 0.5
-  recoilRecoveryDelay: 0.15
-  maxSpread: 10
-  metalHitParticle: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
-  dirtHitParticle: {fileID: 100002, guid: 56bfc2f4b4a0c534c8ef3d0fd1124c44, type: 3}
-  fleshHitParticle: {fileID: 100002, guid: ac1aa04288fad804ba1cd769f4377aaf, type: 3}
-  defaultHitParticle: {fileID: 100002, guid: 56bfc2f4b4a0c534c8ef3d0fd1124c44, type: 3}
-  speedSpreadFactor: 0.1
-  maxMovementSpread: 2
+  fovSettings:
+    fovChangeAmountADS: 0.5
+    fovChangeAmountHipFire: 1
+    fovChangeSpeedShared: 5
+  ammoSettings:
+    maxAmmoInMagazine: 7
+    maxTotalAmmo: 50
+  shootingSettings:
+    range: 100
+    baseAccuracyHip: 2
+    baseAccuracyADS: 3
+    recoilPenaltyHip: 1
+    recoilPenaltyADS: 0.5
+    recoilResetTime: 0.5
+    recoilRecoveryDelay: 0.15
+    maxRecoil: 15
+  movementSpread:
+    standingBaseSpread: 5
+    walkingBaseSpread: 7
+    runningBaseSpread: 10
+    crouchingBaseSpread: 3
+    standingADSBaseSpread: 2
+    walkingADSBaseSpread: 5
+    runningADSBaseSpread: 7
+    crouchingADSBaseSpread: 0.25
+  hitParticles:
+    metalHitParticle: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
+    dirtHitParticle: {fileID: 100002, guid: 56bfc2f4b4a0c534c8ef3d0fd1124c44, type: 3}
+    fleshHitParticle: {fileID: 100002, guid: ac1aa04288fad804ba1cd769f4377aaf, type: 3}
+    defaultHitParticle: {fileID: 100002, guid: 56bfc2f4b4a0c534c8ef3d0fd1124c44, type: 3}
+  hudSettings:
+    ammoText: {fileID: 1264850927}
 --- !u!82 &1724503836
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2917,6 +3878,111 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1811864774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1811864778}
+  - component: {fileID: 1811864777}
+  - component: {fileID: 1811864776}
+  - component: {fileID: 1811864775}
+  m_Layer: 3
+  m_Name: Cube (13)
+  m_TagString: Leaves
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1811864775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811864774}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1811864776
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811864774}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1811864777
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811864774}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1811864778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811864774}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.43, y: -0.04, z: 44.24}
+  m_LocalScale: {x: 81.86483, y: 0.24445185, z: 7.1055374}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944394757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +4596,2741 @@ PrefabInstance:
       propertyPath: moveDirection.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].tag
+      value: DirtyGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].tag
+      value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].tag
+      value: Leaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].tag
+      value: Metal
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].tag
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].tag
+      value: Sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].tag
+      value: Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].tag
+      value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].tag
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].tag
+      value: Gravel
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].tag
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].runClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.size
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].walkClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e68ea1ebd76aa44c8cfa5beb9850830, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1deb201b8bf8f89479323a74e421150b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c518e8469a403b4c981664ecb28a79a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f2844efbf7abf647ba3d75d510f823a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: fa95ebee958fb0e41a42a832aab767eb, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0cfeb72dea261a54cb7672590d2d1656, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0cfeb72dea261a54cb7672590d2d1656, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6da235e2573048249bcbe608f984ff48, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: fdc05ea2699023143ba7e93533cc5a0b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: f26cf9ded47cf0140957490a16f85acc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a30499e47789df48aa9bdb1ec7b0982, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d7e7e6569aab5a45a837f470eaddc8b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 31be579b280d0bc459635877e8c45aee, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: c3f3efc1106f84643a38bd21f6826aaf, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2de8329adc6f9b944a5ab0875fb59924, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: f39f1d43c5b9fbf449e7b39d056e5aad, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3ea0567dbe95714eb0ca07f43a37a96, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 161d5a427e88d594f9906708ccdc5663, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a5ff4a806216b14ab9dba35a4fb258c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd5653e52c4636e4aa3b0ced8f49a18d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 03e0be3d4ce61d34da02d3d0a674d54a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd2143d05a8cf734ea23012e5c3e4dbd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e1dbdb3454a3244d88f4178f8a08a08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 81ca12f276403d4429d50fcf4cf8629a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 80e0ad20812b5da4da809eb1976d38c6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 55a5a001ad9ac3b429adbbe18412b1f9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b25225c72201cd740b16b95b86d57940, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e8e6e435e65fe146b588b8a9d2df461, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8900ae4b297a017448ddb78ea0c2d4da, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: be6f9c5983062b9488c5423a7e1fd1e0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2244aa424da7d2f439f4c53fa73e8b53, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c7ab9bda8ff6364ba31cc57a90a16d5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: b16b005ddc0977b4aa402b5abce3205f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 150e70d1ee30a0547ab9ded90647ad8d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: afe5e23d02afb5142bc95bacc1e287c0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7c73eb9b5b8af24b87031b591566444, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ecd647025e0a3c04fbd5829fff509e09, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3bd1b93317b7a3a49b13011cdaa64d0b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b4b6eb734482064c8c1e5fd45d4d76c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: fba95cafa5bba8649a7d269656e7317b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e924ff5d774024542830602ee674d9a9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 281c105661e5ee14b8e76523200338bd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3069c9f7e833f8e4099228c28f9d65dd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 82354d1fee336984994fbdcc8154c89c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 068414160a0ccf34ca0c11b55d43ffc8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 02d4b2dff380d194fab91c0864b0c386, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 82b9e7907a6c3154b86a53c1be46ff71, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f43edb311d1c4d74fa9b4b86c9157fa6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9fa438d00f348394a8f0f6c053659a36, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1241db8d81c902d4db1bc5e06ba500b3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 524ca5d8ba6570f47a403855a9d2cf29, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f1fa4fa8b3675843abe9345bbefffdd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4abc431d61ba42a4197ca0aba3bad8d3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: db210683cc12f49488148d7e59a51aec, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4bcc738c9307a9d4784ce4e137f5aefb, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 17a55e09664ccf54392bb53bbf824804, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba6dc99376c85b4468a50ff05f135162, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c784f2380314b24a822b2dd4fe062ab, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 055d3b4f4ee12a34e837f1261703644e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: ea7026b9fb96c374994996dba54ba526, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35f5fb2541d6e124ba5e61b1b007a300, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bdf0af42858712489d89032417482a0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8246f3c3f6373334d8bdd41eeb0b3945, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 32074fca44eace649a885ce0e7f5aaaf, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: f20b2086edb0fa14194625121c56cecc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 763409ee05f3fce4a8e83df52710a28e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ffa5441258224694690169f4bd95b969, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a5fe2a543e35ef44980fcf5ac79551a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 062aac8f0463d7945a5a16732efbea51, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e331a9e83f5b77e49bd9efba1b2c2fd9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c2c6c300bd8fc441878f426377bec64, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: f8e559768bed7ed4680ab0449da7ec3a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3529918bd1dd74644ba7748b90343695, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cb5fe43bdf748744a0458fdffed8e70, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ca9e0641870f9341a75bcbda5787159, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 843ca7d8bd153734daf10be927b430ad, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 695be21ef056df946b1746e149dc9cf5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 44737e645aa918043b3d8cab5d1511bc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 302595b93370c52408825d7fb07d09be, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bb076cd89fe2a148a76da2a45c910e4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b8aed54efbbfa946af2f31d3d92f9cd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 16627ace4424d91498eb01bb4028a449, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 32d4132b6bada6b48ac1474c5b84a1f5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bd33082282efa240ae4942ba4e11422, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: b91418e7e651a5741a14cd31af0f5ba8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41ba7c338f630f2489bd0273b0573616, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: a5d1dce4bff0e0a458049ab99fef06c4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ea11a2d13d536e4e8441a0f5895995c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 203ac8b6f07070e4f93f1c1a6fff06c3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ac6649006dbee9e4685752e124111da7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f42914d98b070f741b2feee96a2988ee, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: feb62160ad1f8334ab037017b843d162, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 001f691d110d55648871a03f446ffa08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6478d7fb30f301b4fa8f74d5d1dad094, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1547ad8fbfa4f24d83e5a445aee860d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 47832b56ccba5bc408b1d5aac1871746, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d132da7af60f1145a3deb6a8bc42a08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 505a015d5525e0442ae4a62d5bac304d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ffe843b3b9c8d14792d912d39646105, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2802b1a72217c464ea0171ad67e835f7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 88da42c7018c0fa41870ccf17d13da9c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b4e405a508185e428652ccc26469d53, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: cee4ef3ef0fd155409f7b5a5162cece8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: b30822d7e7d412d459397d0749be742a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f31ac62883f78b4ba610e164f57f879, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c37f11b2d56b374ebf354853c6ad643, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].runClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 75d4e54cf94712d4e8de7ce385abceb2, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c8508d96905ea749ae50b49916fde55, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35bda0c39b1fbe64196a669bfb99757d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6259119f201fafa4ca80646eff6b4b1f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: b04914b5801123b4dafba88cbcb5bc74, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].runClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ec9ef3892d02044a9d62e412eb45ffb, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 551d550ab98e3cc4bb7793e752fe8628, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18e761ff5ef14fd4588d9283fcc9b829, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c0c1f9411026f749bcb3746cd557bec, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38cb68a2a49e89c46bea091d75b27976, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: a62172e6f7275ff4f94c17edc8dfdd0d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a0b4267ac8ee8448b619bc9a3bca6d9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc32c6fd07980144996b811e5d1f2971, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 030e6a43a7d08bd4581668d53a9808f4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 56ea356e65429294f9098ef523fdb70b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5799109e817d3704889f0499d06a23be, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 50ad27f2e46a7074e9864dbad1e7eade, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c758d50866c38364395e6497487c1af3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 88836c252240bf148b51f31eaa40423b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b0242fe2eb831e4cbf3bada890a9dcd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5110f81119d96ea47b2e9a45875c1156, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ee7a4274d261bf43bb411f2eae2561c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52c5e1808bea0b34e8abeab31591f4cc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 520f55c41638a0d408571ddf515810d0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a47b64b8d432b94eb7317d268127b1d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: e2b868994c062864eaa867681aeac0d8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 034986a81cc0be546a288ff268b8783e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e299b9129329f24692bb63f57f33d19, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38f0c96f5fc9ad54bb7f70129602e268, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72b37684ac7a413499d259a0a9be50e6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5da9a1fac751fd544933656ba7cdb367, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 83e12fcd809c9444192c377fe18a65e5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6056a660bb0897e4ea25a31889075437, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[21]
+      value: 
+      objectReference: {fileID: 8300000, guid: af104ebdf73bf7a4ba6013021dd458cb, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: e968240fec458e24a862c16541a528c6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[23]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72854b6a8fde5e54eb8ae2eb10155f45, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: 22dffeeb60f8846499a8c08a2c0e6f80, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[25]
+      value: 
+      objectReference: {fileID: 8300000, guid: 642f9eb7b8ea3f14e9fc48dff8f8e34b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[26]
+      value: 
+      objectReference: {fileID: 8300000, guid: 90754431c63071d48b2bfa8dc2472b9d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[27]
+      value: 
+      objectReference: {fileID: 8300000, guid: d51df139d4e50794993d2130348b08d9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[28]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39ca7e88dc461e8458d02a2284708c0d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].runClips.Array.data[29]
+      value: 
+      objectReference: {fileID: 8300000, guid: d772d1b334ef5f148bf1308d5fb3e4b0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e265270fb85126479eef52d8fce3b08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3701a5fdf99882f40bc00eb9053eec92, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f949b40b7283404099a802630fb2077, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: dfff2b3c7dfb43c419592789f0a6ab81, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 812100e3982e56842adb6ba5be867b7a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 83c58d64f2e240c41b1f2c2885b253a6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3610d597db7918e44906d575bd074616, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 149e8ca9df68d744e9722158daa78ab1, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: d25a8335420d09f43bedf446e2deffa0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: cb111f071b2e63844afba5ac99aceb2b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f0199a4c6005ec4abbb302f71bc036d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 53e2adf2ac488ef46bb2b4074de9e363, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a03a96c5d1e99b4409ddd79098abd9ab, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7187dc81f98b8be4eb97bfc4dd9a5abf, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e3cfcb32689b274419ac73380ea96888, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 314d37dfb74502a4094b835d0e0d6c23, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: f0f794c67e9233d468a38d165590d253, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a7741daba5446e46a40f8074aae75dc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bc66974c41ff8c4fa15f46d21ad3548, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: add3298d47405fd4da3a313bbc049fe2, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 826b5ab8735d6ff4c9e018ef29045829, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 95f5d05b56992b54db766ac6cd05a7d4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 33d255937ea9cb74dbaf46d7a552672d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ec804530ad09cd4093a5ef030cfc7ec, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 466266db15b02104584d921885bcaa8a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 64d4d5a88368ecf4e9d81d94341ac235, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: c11ecc89dec9e1a428e927466942ba39, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ca3f7b75bbc47c45a464277174030a4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].runClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 31ce2f4f55b79d743ae941e2bc3a8dfa, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 557e96b16076cb84285c90941906b44c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 93b5a4dc803c25c48a325a38b5617c33, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 752adf85de15e284ebf55d376e1f4276, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6fa9a250bffc6454a840a823ac5ae71d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41b5781294b7da44ebaad3bd7be35926, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 27c1afdeb55574a48831d6f430f1cbac, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3bf9975566f9cd847977ed3ebb6fd3e3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 475881e2fee063d47b0d1aee0dad3b3a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c9813dc085b5374884cf7bcbaa27dca, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 579926ded69755b45bd048a07dc306c2, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c1967f6644f7ee4cb90dd9da24dd7da, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: bc42a9fc9dbd95442849a1d0a23dd41e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4484cb0b05ef2ae4c9fffdbbbd82c5cd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 120931fb726356346926852e66a98948, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f06448e52184d849bf63240240ddada, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3274935aa2ffdd543aea4fec89c08188, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: ee5109b2ca7428843a14b6a36dda384f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 27a83612c761cb54c9eaa211ed9a74f0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4247388d57a4ce84096a96838717c4c8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9929892c95e88f24ea67533fdec16e2e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b993df4a93c1d304ab19d8b2eb88c9a5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0909de896e9029541b92ae05fe15e4b6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ad0cf00f050bee41a2dee098475dc78, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ca5a9710db4327439c9f8cb8204615e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 14ae706fef2303e4cb71112dbd5d250b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: d15f7338d693f0343843a6b9096d27f6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 518cdd508d673124da33c3a5cdd93f05, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0fb11b2e4f3de6746ba2c3f528d9b01a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 352456aba9356534c84a656a5e94ce1d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: a86f0a1ad946e34429c0e3caac1a484c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b6895e4d3b50784daa1c49222e8eac5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5461cae585b64f64089805f0d313bc84, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b3fc7e56f2686b48b9445e48c7db2c9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 87d51f07abec0584d805bbe3708a7c71, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f96c8d3fef6ab440bdc9bd4ad3d08fe, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 61abfb7bb17151f458862ef823ac0932, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e14b3cc9c6906b42885675f3572d4b3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 846819fd62ca22b478d33e537cd61c8c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6eee7f295d5ff8b4f934dec7f44eaf97, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b1f6289334342841afe6a5a8349e7ec, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: afeb90013e6764449ae1616f47705ff7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpLandClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e001351cd7065543a068386cde4c960, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c41fb169b2991c247a5466e00faa6639, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 76c66b3ae15685a45a334b0628d1edd1, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cb9aa4db4b3a12147bf2fe3d88fee270, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e832dbb2c7c9ba4e97fd3005fe850b7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3af6e561e364a274aa306461461c386b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 30668cf6c5cbfef478b0812fc59eb646, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: eea9624d96ae191439615ca598fe01fa, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: a45bdfd5056ed1d4d8f667cc2498ca12, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].walkClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: ec4bd5988d7de0c41ab2d9959705dd8b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3f3cc8ad058cad408e97b1875afec82, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: ed546d9af9b4e884cbe8d8047fa8c80a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba6466c0db2d12649a51ba73749902d3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: cee5e6c416359ef4cbb722f0cd3a5a14, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: be378a7ab9654eb41ab1e85da1701672, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: f3a60c89c8456614895e7e11520a19d5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f344c93a9337684995c262534fa85f1, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: e4f1c11a5b7fd27468ea8b131669f3a5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: 33d23eef6cc170546a3c9ce3c9bef1f4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ba5fb80a58d03741b65a691dc434897, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: adf6356301a9fc14aaa03c2cfac83816, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[21]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ad92c54c3f49654db8d62382e5f559b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: c73956075c85d384a891d9da3762e5c9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[23]
+      value: 
+      objectReference: {fileID: 8300000, guid: a9e685e1af34121498a651c484426703, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09305e4eb78a4cf4ebee70c4b976fa18, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[25]
+      value: 
+      objectReference: {fileID: 8300000, guid: a1d0e2d83ca2030428f1c772f47b9087, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[26]
+      value: 
+      objectReference: {fileID: 8300000, guid: ff032cb5e57bd114ea87189c2ed8b3c9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[27]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba6029ca248ff2247a1a9ca238be48ff, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[28]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3642dbceb97dc5d419752955421aca54, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[29]
+      value: 
+      objectReference: {fileID: 8300000, guid: b4b126977b28e1d499d8f7f7c580d488, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[30]
+      value: 
+      objectReference: {fileID: 8300000, guid: c79fa9a699dd93647a0729d726adb632, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[31]
+      value: 
+      objectReference: {fileID: 8300000, guid: e41709e0fc1f25449a1e6290e3da9b87, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[32]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb9d0826f01bad94293a3ca6fa1f8427, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[33]
+      value: 
+      objectReference: {fileID: 8300000, guid: a6801ed1ae1ed5648ba823232d0fcdf4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[34]
+      value: 
+      objectReference: {fileID: 8300000, guid: c98c6b4375d0b1e4193f9e678966559a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[35]
+      value: 
+      objectReference: {fileID: 8300000, guid: dd26e9057c37e2943993f701a764fc3e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[36]
+      value: 
+      objectReference: {fileID: 8300000, guid: 326f222e206f8d84bbced6f9d6a0f08e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[37]
+      value: 
+      objectReference: {fileID: 8300000, guid: fbb8ee09f6d45f54d84383b81ca5a5cd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[38]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fb042d8273dfd141955633820660a4f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[39]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb73ae3e299f426418476df5f1fb0f53, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[40]
+      value: 
+      objectReference: {fileID: 8300000, guid: 553615e2b22e2db44b1e1057668753ab, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[41]
+      value: 
+      objectReference: {fileID: 8300000, guid: 837b2ac0dee4b2e49b7c4229129a2cd2, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[42]
+      value: 
+      objectReference: {fileID: 8300000, guid: 55a810a67df804d4487e8f990523255b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[43]
+      value: 
+      objectReference: {fileID: 8300000, guid: dffb2ef44d2dd254aa89c2546475cf3c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[44]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74a0ecc6d5d37bf4f8fe4544dfcd9e8b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[45]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9133d407969ea654a9589b2169db5382, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[46]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d1a50aa1ed16a645bfc3a480d77712c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[47]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9cd93e6b4948e0c4abc089546af87c38, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[48]
+      value: 
+      objectReference: {fileID: 8300000, guid: 97b97fae0b55ce141bff2005c510492e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[49]
+      value: 
+      objectReference: {fileID: 8300000, guid: 96860d4e7cdc1f746906da7b7bc7a388, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[50]
+      value: 
+      objectReference: {fileID: 8300000, guid: 551d550ab98e3cc4bb7793e752fe8628, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[51]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18e761ff5ef14fd4588d9283fcc9b829, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[52]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c0c1f9411026f749bcb3746cd557bec, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[53]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38cb68a2a49e89c46bea091d75b27976, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[54]
+      value: 
+      objectReference: {fileID: 8300000, guid: a62172e6f7275ff4f94c17edc8dfdd0d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[55]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a0b4267ac8ee8448b619bc9a3bca6d9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[56]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc32c6fd07980144996b811e5d1f2971, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[57]
+      value: 
+      objectReference: {fileID: 8300000, guid: 030e6a43a7d08bd4581668d53a9808f4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[58]
+      value: 
+      objectReference: {fileID: 8300000, guid: 56ea356e65429294f9098ef523fdb70b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[59]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5799109e817d3704889f0499d06a23be, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[60]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3f3cc8ad058cad408e97b1875afec82, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[61]
+      value: 
+      objectReference: {fileID: 8300000, guid: ed546d9af9b4e884cbe8d8047fa8c80a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[62]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba6466c0db2d12649a51ba73749902d3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[63]
+      value: 
+      objectReference: {fileID: 8300000, guid: cee5e6c416359ef4cbb722f0cd3a5a14, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[64]
+      value: 
+      objectReference: {fileID: 8300000, guid: be378a7ab9654eb41ab1e85da1701672, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[65]
+      value: 
+      objectReference: {fileID: 8300000, guid: f3a60c89c8456614895e7e11520a19d5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[66]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f344c93a9337684995c262534fa85f1, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[67]
+      value: 
+      objectReference: {fileID: 8300000, guid: e4f1c11a5b7fd27468ea8b131669f3a5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[68]
+      value: 
+      objectReference: {fileID: 8300000, guid: 33d23eef6cc170546a3c9ce3c9bef1f4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[69]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ba5fb80a58d03741b65a691dc434897, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[70]
+      value: 
+      objectReference: {fileID: 8300000, guid: adf6356301a9fc14aaa03c2cfac83816, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[71]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ad92c54c3f49654db8d62382e5f559b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[72]
+      value: 
+      objectReference: {fileID: 8300000, guid: c73956075c85d384a891d9da3762e5c9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[73]
+      value: 
+      objectReference: {fileID: 8300000, guid: a9e685e1af34121498a651c484426703, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[74]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09305e4eb78a4cf4ebee70c4b976fa18, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[75]
+      value: 
+      objectReference: {fileID: 8300000, guid: a1d0e2d83ca2030428f1c772f47b9087, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[76]
+      value: 
+      objectReference: {fileID: 8300000, guid: ff032cb5e57bd114ea87189c2ed8b3c9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[77]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba6029ca248ff2247a1a9ca238be48ff, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[78]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3642dbceb97dc5d419752955421aca54, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[79]
+      value: 
+      objectReference: {fileID: 8300000, guid: b4b126977b28e1d499d8f7f7c580d488, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[80]
+      value: 
+      objectReference: {fileID: 8300000, guid: c79fa9a699dd93647a0729d726adb632, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[81]
+      value: 
+      objectReference: {fileID: 8300000, guid: e41709e0fc1f25449a1e6290e3da9b87, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[82]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb9d0826f01bad94293a3ca6fa1f8427, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[83]
+      value: 
+      objectReference: {fileID: 8300000, guid: a6801ed1ae1ed5648ba823232d0fcdf4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[84]
+      value: 
+      objectReference: {fileID: 8300000, guid: c98c6b4375d0b1e4193f9e678966559a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[85]
+      value: 
+      objectReference: {fileID: 8300000, guid: dd26e9057c37e2943993f701a764fc3e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[86]
+      value: 
+      objectReference: {fileID: 8300000, guid: 326f222e206f8d84bbced6f9d6a0f08e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[87]
+      value: 
+      objectReference: {fileID: 8300000, guid: fbb8ee09f6d45f54d84383b81ca5a5cd, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[88]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fb042d8273dfd141955633820660a4f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[89]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb73ae3e299f426418476df5f1fb0f53, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[90]
+      value: 
+      objectReference: {fileID: 8300000, guid: 553615e2b22e2db44b1e1057668753ab, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[91]
+      value: 
+      objectReference: {fileID: 8300000, guid: 837b2ac0dee4b2e49b7c4229129a2cd2, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[92]
+      value: 
+      objectReference: {fileID: 8300000, guid: 55a810a67df804d4487e8f990523255b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[93]
+      value: 
+      objectReference: {fileID: 8300000, guid: dffb2ef44d2dd254aa89c2546475cf3c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[94]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74a0ecc6d5d37bf4f8fe4544dfcd9e8b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[95]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9133d407969ea654a9589b2169db5382, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[96]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d1a50aa1ed16a645bfc3a480d77712c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[97]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9cd93e6b4948e0c4abc089546af87c38, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[98]
+      value: 
+      objectReference: {fileID: 8300000, guid: 97b97fae0b55ce141bff2005c510492e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].walkClips.Array.data[99]
+      value: 
+      objectReference: {fileID: 8300000, guid: 96860d4e7cdc1f746906da7b7bc7a388, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].jumpLandClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpLandClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c32dcddf9cd3a944a54728c2c878557, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2705e9a452d315940a37bf3403ce5927, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: e80de9a8752d20e4d97ab928d318adb3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4290a2df9f7c8ee4fbe7fee539c5bf30, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 63218441cc62b42499a5df11d6393821, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: e5b9a63e11f3a8b4a8fef1eb139cc786, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ebaaf27aa23a0446b8fd874d60909e5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: ab66dccbdeb63b5449db73ad92f21711, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2d0936410eda534bb65c5f1794cb663, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: d2b2858ce5c7ca9428bfd0e424d5a82d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: 644dc4517bc1c9c40bf1e80d0b048f5b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[21]
+      value: 
+      objectReference: {fileID: 8300000, guid: 48470fafc45f3c04792793e1005e62e9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: 403d45f89131a5a4f9afe643ccbf4f18, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[23]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9535c599feb8b7a4990789aebab305e4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da35e1befe0014da25418951455674, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[25]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c85c1193002215499b462f763701072, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[26]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b7628f8c05047a4fbef52fe3ed4729d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[27]
+      value: 
+      objectReference: {fileID: 8300000, guid: 65507879ee055e648b1de3581c284cca, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[28]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a2c7093236272043805ca942d893d01, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].walkClips.Array.data[29]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e0fe368d9a158a46b0fe96e660e78cc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpLandClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bf91c27647502141bb5335b3069b330, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: fcb08ad9aae12794684aee4e24491861, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 31fe8f8b6102ca748b207a66a89b5c6a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e3cf5793eea2204cb2c8f93717c3938, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: c895c66a48b24dc459225afaabcb51f9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: adb212c3a8123cd43b5c4577854ddb5b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8544d587993061e41b943669b11c357d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: f3f683944e6861645a16971f3f17ca40, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: acd6fcd8cc56d694db1662af3026d455, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].walkClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39b25c6fb65fbde4f9f3534899953f28, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f06dcd119362ab4e92a4141798a689e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].walkClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd926afca0aa8ab48b8abfc15454bc3d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpLandClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpLandClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpStartClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].jumpLandClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].jumpStartClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.size
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpStartClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpStartClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpStartClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].jumpStartClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ea11a2d13d536e4e8441a0f5895995c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 203ac8b6f07070e4f93f1c1a6fff06c3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ac6649006dbee9e4685752e124111da7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f42914d98b070f741b2feee96a2988ee, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: feb62160ad1f8334ab037017b843d162, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 001f691d110d55648871a03f446ffa08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6478d7fb30f301b4fa8f74d5d1dad094, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1547ad8fbfa4f24d83e5a445aee860d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 47832b56ccba5bc408b1d5aac1871746, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].footstepClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d132da7af60f1145a3deb6a8bc42a08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7131d701ae015a54aa3d856feccd513f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 942019cf9ecd5854ebeb343b12b7f779, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a88f429c4a7b734f9c4254f0c654cea, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aeefb601c305f64487cebdfacae5b6c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a967f92e38352bb4291945423de63499, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 856b6d74addb9ad4ab2b7b47bae3e839, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f2bc9c36f73ea50419060ec6eb40c246, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09226248e570c904a900ec2ecb767a68, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: ccfb18eb53b37384b9632ae00f725881, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e0c586341010324fadd73453569f0aa, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb491a4de6595a246bbef0f211e2bd73, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 54cd8769272b7ca4c9a1386d106f621d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpLandClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d65afb5fe7bb7e41a03b001f5acfbde, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 99c4a3774a894ff41a9f16f21aad34aa, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d92b7b017bd31947a2785ee1aca7812, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d4ce8205a3ae9ab4181dbc190b1a837e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0462feb393ce2b64b9f78c8bc9303014, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e94f3d51023c5446b59f52c71e0cade, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8f480d252db9449b2f978284506f8e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 79e6e1370ee1ca747b469e68d0dcb0fe, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b796f7e3b1a4d7344b7ee8d6c077a68f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f080a1e65d584c4ca3e3c75fbb406b3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 45bc125cb8cb195408490bec63fde615, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpLandClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: c2e0d3f88cb48f240af40a1f1bac7e8c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9064dac268872fd48bf90e84554267ab, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cff0e50a53df0a94299dc5ef1863ab62, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e5f9c2116d87f5a46a40ce04919d2dcc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpLandClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41ec355b830e30e40ac5b45954d91907, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpLandClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 778bae15671a6c74c93c28c84cae9fe4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b27347ebdc5a70b42876b9af0e9e1a41, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d59a6a98991e964ebb879bed14e8b9c, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5039e24f35fce8b4ea426f1543234bba, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ff6a117a03dee04fbb869f5f41037a0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e489ad30bcbab44d81608af00695302, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpLandClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: dfeacf04bb644374ab5ab503cb4eaff7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 304f2bf2228cba94e91cd22803e54bcf, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c86476186f357d44eb470d68a2986520, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f65b8caedf0c89b4c9f6ea1408f5e362, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3992630b0c74ca045bca8125f360aa4a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c65c34d499c17a42a643d5727eff438, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e8c82818ac04cf94c9c3a816122e9c4d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f08d12f8f068e5d4fb60a2683da4372f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21ef2d961a0c7ad458ddeb2734ff319a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpLandClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ff708c2ef19b434aa3ee5ab814e5723, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e10d68c7f7aa854694549c916e8ba46, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: baf90d315c62c1648ba2901ff92db065, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpLandClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 70bfbaaebebfb0d4ba87a5e9947d5ad3, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 665f92bb69e46a94a8caf3717dbb0d5e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8802544ed0324a14095edc70ab3bbab1, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[0].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 65d9836027675574b8d070c5718f99c7, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].jumpLandClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: bb5ec83ccc5c69f43b31f100278bff91, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].jumpLandClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 623ad07c146cedd4db6b902fd1612618, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 984d316ed8be3ac4da9e31768a8b1fa9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a9abdcacc68aa447b151d0b1f93754b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: fe175f117cf3fb2428d279bc830a1830, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3d29f80378ba8e4e9c00f92fc5b5d4e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2642ca70ae8c186489090a89cce4e395, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: f193a8bae58928946916aab1c2068cf1, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f4dd9cb929f5ac4f82b43558fde29c6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: b04465ceef591864badb1aa5c65ee644, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bd6d911a80f46040977198422926d29, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[1].jumpStartClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: b15f8eaceae712040a379ad0aaff9240, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 89024d65ecc31884b8ff35b97efa8dcc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[2].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 156f78901fdf86e49ac90dd0c4a31ac5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b25225c72201cd740b16b95b86d57940, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e8e6e435e65fe146b588b8a9d2df461, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8900ae4b297a017448ddb78ea0c2d4da, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: be6f9c5983062b9488c5423a7e1fd1e0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2244aa424da7d2f439f4c53fa73e8b53, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c7ab9bda8ff6364ba31cc57a90a16d5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: b16b005ddc0977b4aa402b5abce3205f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 150e70d1ee30a0547ab9ded90647ad8d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: afe5e23d02afb5142bc95bacc1e287c0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7c73eb9b5b8af24b87031b591566444, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8420cf17e21d6354a98e6ef6d19dc9cc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e708389b7a8f64a46aa12d201c187b69, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f85e18b3e969dac4bbfc7f6b18139932, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: caceea3cf407e1b47a4024a755887675, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 322f3dcfdbd5b5742a885bfbc4fe5365, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[4].jumpStartClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 866abdf3a931850498786581089be202, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b120cc7d7055a284ea89422d100043e0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 64a62780b84db9645b00e69eb0621928, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cd697be0072bfc4882068307562c2a9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpStartClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6866bd26706082149a4be4b47f1e1b3d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[5].jumpStartClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e161741de42dca1428e352cf4e26b50f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6431605160c83d7468a5dc4cca267526, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7713ba384a2a8f44ab2eb40dee9ddaea, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ff6d406771365f46aa326e7e91b10fe, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9da340c0b94731d4887cfa136e57ff09, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ae7c91bec282be438a3815efac64b89, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[6].jumpStartClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1441d087c4f64a345b2c551256245ae8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f42760acdd77d6c459020ab0f9db4f30, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: db2281b9de1863f409d62f9edf69c6cf, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[7].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a465f4e2a2f3a354f927f77994a68a08, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3992630b0c74ca045bca8125f360aa4a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c65c34d499c17a42a643d5727eff438, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e8c82818ac04cf94c9c3a816122e9c4d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f08d12f8f068e5d4fb60a2683da4372f, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21ef2d961a0c7ad458ddeb2734ff319a, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[8].jumpStartClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ff708c2ef19b434aa3ee5ab814e5723, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 80d4ea7778bc3d9459d9fcea672afcee, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 314755392aa072e4eb6fc3b02b791b72, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[9].jumpStartClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7d6941d3b847874686c2b6a80ab8a1b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].jumpStartClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d22997c3222c124d91d351ddc1c6ee4, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[10].jumpStartClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: fcbaf164018fc614a9729400cf40f9de, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52c5e1808bea0b34e8abeab31591f4cc, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 520f55c41638a0d408571ddf515810d0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a47b64b8d432b94eb7317d268127b1d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: e2b868994c062864eaa867681aeac0d8, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 034986a81cc0be546a288ff268b8783e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e299b9129329f24692bb63f57f33d19, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38f0c96f5fc9ad54bb7f70129602e268, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72b37684ac7a413499d259a0a9be50e6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5da9a1fac751fd544933656ba7cdb367, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 83e12fcd809c9444192c377fe18a65e5, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6056a660bb0897e4ea25a31889075437, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[21]
+      value: 
+      objectReference: {fileID: 8300000, guid: af104ebdf73bf7a4ba6013021dd458cb, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: e968240fec458e24a862c16541a528c6, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[23]
+      value: 
+      objectReference: {fileID: 8300000, guid: 72854b6a8fde5e54eb8ae2eb10155f45, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: 22dffeeb60f8846499a8c08a2c0e6f80, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[25]
+      value: 
+      objectReference: {fileID: 8300000, guid: 642f9eb7b8ea3f14e9fc48dff8f8e34b, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[26]
+      value: 
+      objectReference: {fileID: 8300000, guid: 90754431c63071d48b2bfa8dc2472b9d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[27]
+      value: 
+      objectReference: {fileID: 8300000, guid: d51df139d4e50794993d2130348b08d9, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[28]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39ca7e88dc461e8458d02a2284708c0d, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[29]
+      value: 
+      objectReference: {fileID: 8300000, guid: d772d1b334ef5f148bf1308d5fb3e4b0, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[30]
+      value: 
+      objectReference: {fileID: 8300000, guid: e6709cc34e1daa54f9d575a452e0f64e, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[31]
+      value: 
+      objectReference: {fileID: 8300000, guid: 293f9cc4ac64b3b4cb6f57d953bca997, type: 3}
+    - target: {fileID: 550558444471622759, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: footstepSounds.Array.data[3].jumpStartClips.Array.data[32]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f4bb31f06728be4ba0bed5c2641896c, type: 3}
     - target: {fileID: 1178467224112111369, guid: aa8c8241de80c5d46974c1745f35a14f,
         type: 3}
       propertyPath: m_Name
@@ -3539,6 +7340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178467224112111369, guid: aa8c8241de80c5d46974c1745f35a14f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Leaves
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 550558443198627330, guid: aa8c8241de80c5d46974c1745f35a14f, type: 3}
@@ -4915,7 +8721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3952545636315485571
 Transform:
   m_ObjectHideFlags: 0
@@ -6824,6 +10630,16 @@ SceneRoots:
   - {fileID: 4424721840810900271}
   - {fileID: 718643912}
   - {fileID: 416186449}
+  - {fileID: 1701293784}
+  - {fileID: 274770904}
+  - {fileID: 1811864778}
+  - {fileID: 355647889}
+  - {fileID: 1117017914}
+  - {fileID: 1326798128}
+  - {fileID: 1004055876}
+  - {fileID: 1024286602}
+  - {fileID: 376664051}
+  - {fileID: 776691269}
   - {fileID: 965453944}
   - {fileID: 858807212}
   - {fileID: 625703078}

@@ -25,6 +25,35 @@ public class FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
+    // Movement state variables
+    private bool isRunning;
+    private bool isCrouching;
+    private bool hasJumped = false; // Track if the player has jumped
+    private bool isFalling = false; // Track if the player is falling
+    private float fallStartY;
+
+    // Footstep sound variables
+    [System.Serializable]
+    public class FootstepSound
+    {
+        public string tag;
+        public List<AudioClip> walkClips;
+        public List<AudioClip> runClips;
+        public List<AudioClip> jumpStartClips;
+        public List<AudioClip> jumpLandClips;
+    }
+
+    public AudioSource footstepAudioSource;
+    public List<FootstepSound> footstepSounds;
+    public float baseStepIntervalWalking = 0.5f;
+    public float baseStepIntervalRunning = 0.3f;
+
+    private Dictionary<string, FootstepSound> footstepSoundsDict = new Dictionary<string, FootstepSound>();
+    private float footstepTimer = 0f;
+    private float footstepInterval;
+
+    private bool previouslyGrounded = false;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -32,49 +61,110 @@ public class FPSController : MonoBehaviour
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Initialize footstep sounds dictionary
+        foreach (FootstepSound fs in footstepSounds)
+        {
+            if (!footstepSoundsDict.ContainsKey(fs.tag))
+            {
+                footstepSoundsDict.Add(fs.tag, fs);
+            }
+        }
+
+        // Ensure footstepAudioSource is assigned
+        if (footstepAudioSource == null)
+        {
+            footstepAudioSource = GetComponent<AudioSource>();
+
+            if (footstepAudioSource == null)
+            {
+                footstepAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
     }
+
     void Update()
     {
-        // We are grounded, so recalculate move direction based on axes
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
         // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        isRunning = Input.GetKey(KeyCode.LeftShift);
 
         // Press Left Control to crouch
-        bool isCrouching = Input.GetKey(KeyCode.LeftControl);
+        isCrouching = Input.GetKey(KeyCode.LeftControl);
         float targetHeight = isCrouching ? crouchHeight : standingHeight;
         float height = characterController.height;
         float speed = isCrouching ? crouchSpeed : standingSpeed;
         height = Mathf.Lerp(height, targetHeight, Time.deltaTime * speed);
         characterController.height = height;
 
-        // Adjust speed based on whether the player is crouching or running
-        float movementSpeed = isCrouching ? crouchWalkingSpeed : (isRunning ? runningSpeed : walkingSpeed);
-        float curSpeedX = canMove ? (movementSpeed * Input.GetAxis("Vertical")) : 0;
-        float curSpeedY = canMove ? (movementSpeed * Input.GetAxis("Horizontal")) : 0;
+        // Get raw input
+        float inputX = canMove ? Input.GetAxis("Horizontal") : 0;
+        float inputY = canMove ? Input.GetAxis("Vertical") : 0;
 
-        float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        // Create input vector
+        Vector3 input = new Vector3(inputX, 0, inputY);
 
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        // Normalize input if it exceeds 1 to prevent faster diagonal movement
+        if (input.magnitude > 1)
         {
-            moveDirection.y = jumpSpeed;
+            input.Normalize();
         }
-        else
+
+        // Preserve vertical movement
+        float movementDirectionY = moveDirection.y;
+
+        // Adjust speed based on whether the player is crouching or running
+        float movementSpeed = isCrouching
+            ? crouchWalkingSpeed
+            : (isRunning ? runningSpeed : walkingSpeed);
+
+        // Calculate movement direction
+        moveDirection = transform.TransformDirection(input) * movementSpeed;
+
+        // Restore vertical movement
+        moveDirection.y = movementDirectionY;
+
+        // Handle jumping and gravity
+        if (characterController.isGrounded)
         {
-            moveDirection.y = movementDirectionY;
+            if (Input.GetButtonDown("Jump") && canMove)
+            {
+                moveDirection.y = jumpSpeed;
+                PlayJumpStartSound();
+                hasJumped = true; // Player has jumped
+            }
+            else if (moveDirection.y < -1f)
+            {
+                moveDirection.y = -1f; // Keep grounded
+            }
         }
 
         // Apply gravity
-        if (!characterController.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
+        moveDirection.y -= gravity * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+
+        // Footstep sound logic
+        float currentSpeed = new Vector3(characterController.velocity.x, 0, characterController.velocity.z).magnitude;
+
+        if (characterController.isGrounded && currentSpeed > 0.1f && canMove && footstepTimer <= 0f)
+        {
+            if (CurrentMovementState == MovementState.Running)
+            {
+                footstepInterval = baseStepIntervalRunning;
+            }
+            else
+            {
+                footstepInterval = baseStepIntervalWalking;
+            }
+
+            PlayFootstepSound();
+            footstepTimer = footstepInterval;
+        }
+        else
+        {
+            footstepTimer -= Time.deltaTime;
+        }
 
         // Player and Camera rotation
         if (canMove)
@@ -84,17 +174,159 @@ public class FPSController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
+
+        // Landing sound logic
+        bool isGrounded = characterController.isGrounded;
+
+        if (!isGrounded && previouslyGrounded)
+        {
+            // Player just left the ground
+            fallStartY = transform.position.y;
+            isFalling = true;
+        }
+        else if (isGrounded && !previouslyGrounded)
+        {
+            // Player just landed
+            if (hasJumped)
+            {
+                // Play landing sound after jump
+                PlayJumpLandSound();
+                hasJumped = false; // Reset jump flag
+            }
+            else if (isFalling)
+            {
+                // Calculate fall distance and play landing sound only if fall distance is significant
+                float fallDistance = fallStartY - transform.position.y;
+                if (fallDistance > 1.0f)
+                {
+                    PlayJumpLandSound();
+                }
+                isFalling = false; // Reset falling flag
+            }
+        }
+
+        previouslyGrounded = isGrounded;
+    }
+
+    void PlayFootstepSound()
+    {
+        RaycastHit hit;
+
+        if (
+            Physics.Raycast(
+                transform.position,
+                Vector3.down,
+                out hit,
+                characterController.height / 2 + 0.4f
+            )
+        )
+        {
+            string tag = hit.collider.tag;
+
+            FootstepSound fs;
+            if (!footstepSoundsDict.TryGetValue(tag, out fs))
+            {
+                // Use DirtyGround as default
+                footstepSoundsDict.TryGetValue("DirtyGround", out fs);
+            }
+
+            if (fs != null)
+            {
+                List<AudioClip> clips = null;
+
+                if (CurrentMovementState == MovementState.Running && fs.runClips.Count > 0)
+                {
+                    clips = fs.runClips;
+                }
+                else if (
+                    (
+                        CurrentMovementState == MovementState.Walking
+                        || CurrentMovementState == MovementState.Crouching
+                    )
+                    && fs.walkClips.Count > 0
+                )
+                {
+                    clips = fs.walkClips;
+                }
+
+                if (clips != null && clips.Count > 0)
+                {
+                    AudioClip clip = clips[Random.Range(0, clips.Count)];
+                    footstepAudioSource.PlayOneShot(clip);
+                }
+            }
+        }
+    }
+
+    void PlayJumpStartSound()
+    {
+        RaycastHit hit;
+
+        if (
+            Physics.Raycast(
+                transform.position,
+                Vector3.down,
+                out hit,
+                characterController.height / 2 + 0.4f
+            )
+        )
+        {
+            string tag = hit.collider.tag;
+
+            FootstepSound fs;
+            if (!footstepSoundsDict.TryGetValue(tag, out fs))
+            {
+                // Use DirtyGround as default
+                footstepSoundsDict.TryGetValue("DirtyGround", out fs);
+            }
+
+            if (fs != null && fs.jumpStartClips.Count > 0)
+            {
+                AudioClip clip = fs.jumpStartClips[Random.Range(0, fs.jumpStartClips.Count)];
+                footstepAudioSource.PlayOneShot(clip, 0.5f); // Play at half volume
+            }
+        }
+    }
+
+    void PlayJumpLandSound()
+    {
+        RaycastHit hit;
+
+        if (
+            Physics.Raycast(
+                transform.position,
+                Vector3.down,
+                out hit,
+                characterController.height / 2 + 0.4f
+            )
+        )
+        {
+            string tag = hit.collider.tag;
+
+            FootstepSound fs;
+            if (!footstepSoundsDict.TryGetValue(tag, out fs))
+            {
+                // Use DirtyGround as default
+                footstepSoundsDict.TryGetValue("DirtyGround", out fs);
+            }
+
+            if (fs != null && fs.jumpLandClips.Count > 0)
+            {
+                AudioClip clip = fs.jumpLandClips[Random.Range(0, fs.jumpLandClips.Count)];
+                footstepAudioSource.PlayOneShot(clip, 0.5f); // Play at half volume
+            }
+        }
     }
 
     public float CurrentSpeed
     {
         get
         {
-            if (Input.GetKey(KeyCode.LeftControl)) // Crouching
+            if (isCrouching) // Crouching
             {
                 return crouchWalkingSpeed;
             }
-            else if (Input.GetKey(KeyCode.LeftShift)) // Running
+            else if (isRunning) // Running
             {
                 return runningSpeed;
             }
@@ -102,6 +334,36 @@ public class FPSController : MonoBehaviour
             {
                 return walkingSpeed;
             }
+        }
+    }
+
+    // Movement state enum
+    public enum MovementState
+    {
+        Standing,
+        Walking,
+        Running,
+        Crouching
+    }
+
+    // Expose the current movement state
+    public MovementState CurrentMovementState
+    {
+        get
+        {
+            if (isCrouching && canMove && characterController.velocity.magnitude >= 0.1f)
+            {
+                return MovementState.Crouching;
+            }
+            if (isRunning && canMove && characterController.velocity.magnitude >= 0.1f)
+            {
+                return MovementState.Running;
+            }
+            if (canMove && characterController.velocity.magnitude >= 0.1f)
+            {
+                return MovementState.Walking;
+            }
+            return MovementState.Standing;
         }
     }
 }

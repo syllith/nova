@@ -8,6 +8,17 @@ TagManager:
   - Flesh
   - Metal
   - Dirt
+  - Grass
+  - Leaves
+  - Mud
+  - Rock
+  - Sand
+  - Snow
+  - Tile
+  - Water
+  - Wood
+  - DirtyGround
+  - Gravel
   layers:
   - Default
   - TransparentFX

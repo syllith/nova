@@ -1,27 +1,37 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class WeaponBehavior : MonoBehaviour
 {
-    [Header("Setup")]
-    public Animator weaponAnimator;
-    public AudioClip gunshotSound,
-        reloadSound,
-        emptyClickSound;
-    public ParticleSystem muzzleFlash;
-    public Light muzzleLight;
-    public GameObject swayObject;
-    public int damage = 60;
-    public FPSController playerController;
-    public GameObject shellCasingPrefab;
-    public Transform shellEjectionPoint;
-    public float shellEjectionForce = 3.3f;
-    public CrosshairManager crosshairManager; // Reference to CrosshairManager
+    [System.Serializable]
+    public class SetupSettings
+    {
+        public Animator weaponAnimator;
+        public AudioClip gunshotSound,
+            reloadSound,
+            emptyClickSound;
+        public ParticleSystem muzzleFlash;
+        public Light muzzleLight;
+        public GameObject swayObject,
+            slideObject;
+        public int damage = 60;
+        public FPSController playerController;
+        public GameObject shellCasingPrefab;
+        public Transform shellEjectionPoint;
+        public float shellEjectionForce = 3.3f;
+        public CrosshairManager crosshairManager;
+    }
 
-    [Header("ADS")]
-    public float adsSpeed = 15f;
-    public float adsZoomAmount = 40.0f;
-    public float adsZoomSpeed = 15.0f;
+    [System.Serializable]
+    public class ADSSettings
+    {
+        public float adsSpeed = 15f;
+        public float adsZoomAmount = 40f;
+        public float adsZoomSpeed = 15f;
+        public Vector3 aimPosition = new Vector3(0.2277f, 0.0755f, 0.0999f);
+        public Quaternion aimRotation = Quaternion.Euler(355.605f, 359.595f, 0f);
+    }
 
     [System.Serializable]
     public struct SwaySettings
@@ -30,12 +40,76 @@ public class WeaponBehavior : MonoBehaviour
             smooth,
             maxAmount,
             rotationFactor,
-            yRotationFactor,
-            bobbingSpeed,
+            yRotationFactor;
+        public float bobbingSpeed,
             verticalBobAmount,
             horizontalBobAmount,
             rotationalBobAmount;
     }
+
+    [System.Serializable]
+    public class FOVSettings
+    {
+        public float fovChangeAmountADS = 0.5f;
+        public float fovChangeAmountHipFire = 1.0f;
+        public float fovChangeSpeedShared = 5.0f;
+    }
+
+    [System.Serializable]
+    public class AmmoSettings
+    {
+        public int maxAmmoInMagazine = 7;
+        public int maxTotalAmmo = 14;
+    }
+
+    [System.Serializable]
+    public class ShootingSettings
+    {
+        public float range = 100f;
+        public float baseAccuracyHip = 1f;
+        public float baseAccuracyADS = 0.5f;
+        public float recoilPenaltyHip = 0.5f;
+        public float recoilPenaltyADS = 0.25f;
+        public float recoilResetTime = 5f;
+        public float recoilRecoveryDelay = 0.5f;
+        public float maxRecoil = 3f;
+    }
+
+    [System.Serializable]
+    public class MovementSpreadSettings
+    {
+        public float standingBaseSpread = 1f;
+        public float walkingBaseSpread = 2f;
+        public float runningBaseSpread = 4f;
+        public float crouchingBaseSpread = 0.5f;
+
+        // New settings for ADS
+        public float standingADSBaseSpread = 0.5f;
+        public float walkingADSBaseSpread = 1f;
+        public float runningADSBaseSpread = 2f;
+        public float crouchingADSBaseSpread = 0.25f;
+    }
+
+    [System.Serializable]
+    public class HitParticles
+    {
+        public GameObject metalHitParticle,
+            dirtHitParticle,
+            fleshHitParticle,
+            defaultHitParticle;
+    }
+
+    [System.Serializable]
+    public class HUDSettings
+    {
+        public TextMeshProUGUI ammoText;
+    }
+
+    [Header("Setup")]
+    public SetupSettings setup = new SetupSettings();
+
+    [Header("ADS")]
+    public ADSSettings ads = new ADSSettings();
 
     [Header("Sway")]
     public SwaySettings swaySettings = new SwaySettings
@@ -65,77 +139,71 @@ public class WeaponBehavior : MonoBehaviour
         rotationalBobAmount = 0.0001f
     };
 
-    [Header("ADS Position")]
-    public Vector3 aimPosition = new Vector3(0.2277f, 0.0755f, 0.0999f);
-    public Quaternion aimRotation = Quaternion.Euler(355.605f, 359.595f, 0f);
-
     [Header("FOV Change Settings")]
-    public float fovChangeAmountADS = 0.5f;
-    public float fovChangeAmountHipFire = 1.0f;
-    public float fovChangeSpeedShared = 5.0f;
+    public FOVSettings fovSettings = new FOVSettings();
 
     [Header("Ammo Settings")]
-    public int maxAmmoInMagazine = 7;
-    public int maxTotalAmmo = 14;
+    public AmmoSettings ammoSettings = new AmmoSettings();
 
     [Header("Shooting Settings")]
-    public float range = 100f;
-    public float baseAccuracyHip = 1f; // In degrees
-    public float baseAccuracyADS = 0.5f; // In degrees
-    public float recoilPenaltyHip = 0.5f; // In degrees per shot
-    public float recoilPenaltyADS = 0.25f; // In degrees per shot
-    public float recoilResetTime = 5f; // Time in seconds to recover from max recoil
-    public float recoilRecoveryDelay = 0.5f; // Time before recoil recovery starts
-    public float maxSpread = 5f; // Maximum spread in degrees
-
-    [Header("Hit Particles")]
-    public GameObject metalHitParticle,
-        dirtHitParticle,
-        fleshHitParticle,
-        defaultHitParticle;
+    public ShootingSettings shootingSettings = new ShootingSettings();
 
     [Header("Movement Spread Settings")]
-    public float speedSpreadFactor = 0.1f; // Adjust this to control how much speed affects spread
-    public float maxMovementSpread = 2f; // Maximum additional spread from movement
+    public MovementSpreadSettings movementSpread = new MovementSpreadSettings();
+
+    [Header("Hit Particles")]
+    public HitParticles hitParticles = new HitParticles();
+
+    [Header("HUD")]
+    public HUDSettings hudSettings = new HUDSettings();
 
     private int currentAmmo,
         totalAmmo;
     private bool isReloading = false,
         isAiming,
         isFiring = false;
+    private bool lockSlideDuringReload = false;
     private Camera mainCamera;
-    private float originalFOV;
-    private Vector3 initialSwayPosition;
-    private Quaternion initialSwayRotation;
+    private float originalFOV,
+        swayTimer,
+        currentSpread,
+        recoilAmount,
+        lastFireTime;
+    private Vector3 initialSwayPosition,
+        targetSwayPosition,
+        slideOriginalPosition;
+    private Quaternion initialSwayRotation,
+        targetSwayRotation;
     private SwaySettings currentSwaySettings;
     private AudioSource audioSource;
-    private Vector3 targetSwayPosition;
-    private Quaternion targetSwayRotation;
-    private float swayTimer,
-        currentSpread,
-        recoilAmount;
-    private float lastFireTime; // Tracks the time of the last shot fired
 
     private void Start()
     {
         mainCamera = Camera.main;
         originalFOV = mainCamera?.fieldOfView ?? 60f;
-        initialSwayPosition = swayObject?.transform.localPosition ?? Vector3.zero;
-        initialSwayRotation = swayObject?.transform.localRotation ?? Quaternion.identity;
+        initialSwayPosition = setup.swayObject?.transform.localPosition ?? Vector3.zero;
+        initialSwayRotation = setup.swayObject?.transform.localRotation ?? Quaternion.identity;
         currentSwaySettings = swaySettings;
         audioSource = GetComponent<AudioSource>();
-        currentAmmo = maxAmmoInMagazine;
-        totalAmmo = maxTotalAmmo;
+        currentAmmo = ammoSettings.maxAmmoInMagazine;
+        totalAmmo = ammoSettings.maxTotalAmmo;
         currentSpread = GetCurrentBaseAccuracy();
 
-        // Assign CrosshairManager if not set
-        if (crosshairManager == null)
+        if (setup.slideObject != null)
+            slideOriginalPosition = setup.slideObject.transform.localPosition;
+        else
+            Debug.LogError("Slide Object is not assigned.");
+
+        if (setup.crosshairManager == null)
         {
-            crosshairManager = FindObjectOfType<CrosshairManager>();
-            if (crosshairManager == null)
-            {
+            setup.crosshairManager = FindObjectOfType<CrosshairManager>();
+            if (setup.crosshairManager == null)
                 Debug.LogError("CrosshairManager not found in the scene.");
-            }
+        }
+
+        if (hudSettings.ammoText == null)
+        {
+            Debug.LogError("Ammo Text UI element is not assigned in HUD Settings.");
         }
     }
 
@@ -145,38 +213,80 @@ public class WeaponBehavior : MonoBehaviour
         HandleFiring();
         HandleReloading();
         UpdateCameraAndWeaponPosition();
-        if (swayObject)
+
+        if (setup.swayObject)
         {
             HandleSway();
             HandleBob();
         }
 
-        // Recoil recovery after a delay
         if (recoilAmount > 0)
         {
             float timeSinceLastShot = Time.time - lastFireTime;
-            if (timeSinceLastShot >= recoilRecoveryDelay)
+            if (timeSinceLastShot >= shootingSettings.recoilRecoveryDelay)
             {
                 float recoilRecoveryRate =
-                    recoilResetTime > 0
-                        ? (maxSpread / recoilResetTime) * Time.deltaTime
-                        : maxSpread;
+                    shootingSettings.recoilResetTime > 0
+                        ? (shootingSettings.maxRecoil / shootingSettings.recoilResetTime)
+                            * Time.deltaTime
+                        : shootingSettings.maxRecoil;
                 recoilAmount = Mathf.Max(recoilAmount - recoilRecoveryRate, 0f);
             }
         }
 
-        // Movement spread based on player's speed
-        float speedSpread =
-            playerController != null ? playerController.CurrentSpeed * speedSpreadFactor : 0f;
-        speedSpread = Mathf.Clamp(speedSpread, 0f, maxMovementSpread);
+        float movementSpreadValue = GetBaseSpreadForCurrentMovementState();
+        currentSpread = movementSpreadValue + recoilAmount;
+        float maxTotalSpread = movementSpreadValue + shootingSettings.maxRecoil;
+        currentSpread = Mathf.Min(currentSpread, maxTotalSpread);
 
-        // Update current spread
-        currentSpread = Mathf.Min(GetCurrentBaseAccuracy() + recoilAmount + speedSpread, maxSpread);
+        if (setup.crosshairManager != null)
+            setup.crosshairManager.UpdateCrosshair(currentSpread, isAiming, isReloading);
 
-        // Update the crosshair each frame
-        if (crosshairManager != null)
+        UpdateSlidePosition();
+        UpdateHUD();
+    }
+
+    private void UpdateHUD()
+    {
+        if (hudSettings.ammoText != null)
         {
-            crosshairManager.UpdateCrosshair(currentSpread, isAiming, isReloading);
+            hudSettings.ammoText.text = $"{currentAmmo} / {totalAmmo}";
+        }
+    }
+
+    private float GetBaseSpreadForCurrentMovementState()
+    {
+        if (isAiming)
+        {
+            switch (setup.playerController.CurrentMovementState)
+            {
+                case FPSController.MovementState.Standing:
+                    return movementSpread.standingADSBaseSpread;
+                case FPSController.MovementState.Walking:
+                    return movementSpread.walkingADSBaseSpread;
+                case FPSController.MovementState.Running:
+                    return movementSpread.runningADSBaseSpread;
+                case FPSController.MovementState.Crouching:
+                    return movementSpread.crouchingADSBaseSpread;
+                default:
+                    return movementSpread.standingADSBaseSpread;
+            }
+        }
+        else
+        {
+            switch (setup.playerController.CurrentMovementState)
+            {
+                case FPSController.MovementState.Standing:
+                    return movementSpread.standingBaseSpread;
+                case FPSController.MovementState.Walking:
+                    return movementSpread.walkingBaseSpread;
+                case FPSController.MovementState.Running:
+                    return movementSpread.runningBaseSpread;
+                case FPSController.MovementState.Crouching:
+                    return movementSpread.crouchingBaseSpread;
+                default:
+                    return movementSpread.standingBaseSpread;
+            }
         }
     }
 
@@ -201,13 +311,13 @@ public class WeaponBehavior : MonoBehaviour
             )
         );
         targetSwayPosition = new Vector3(factorX, factorY, 0);
-        swayObject.transform.localRotation = Quaternion.Slerp(
-            swayObject.transform.localRotation,
+        setup.swayObject.transform.localRotation = Quaternion.Slerp(
+            setup.swayObject.transform.localRotation,
             initialSwayRotation * targetSwayRotation,
             Time.deltaTime * currentSwaySettings.smooth
         );
-        swayObject.transform.localPosition = Vector3.Lerp(
-            swayObject.transform.localPosition,
+        setup.swayObject.transform.localPosition = Vector3.Lerp(
+            setup.swayObject.transform.localPosition,
             initialSwayPosition + targetSwayPosition,
             Time.deltaTime * currentSwaySettings.smooth
         );
@@ -223,7 +333,7 @@ public class WeaponBehavior : MonoBehaviour
             waveslice = Mathf.Sin(swayTimer);
             float adjustedBobbingSpeed =
                 currentSwaySettings.bobbingSpeed
-                * (playerController.CurrentSpeed / playerController.walkingSpeed);
+                * (setup.playerController.CurrentSpeed / setup.playerController.walkingSpeed);
             swayTimer += adjustedBobbingSpeed * Time.deltaTime;
             if (swayTimer > Mathf.PI * 2)
                 swayTimer -= Mathf.PI * 2;
@@ -236,12 +346,12 @@ public class WeaponBehavior : MonoBehaviour
             float horizontalTranslateChange =
                 Mathf.Cos(swayTimer) * currentSwaySettings.horizontalBobAmount;
             float rotationChange = waveslice * currentSwaySettings.rotationalBobAmount;
-            swayObject.transform.localPosition += new Vector3(
+            setup.swayObject.transform.localPosition += new Vector3(
                 horizontalTranslateChange,
                 translateChange,
                 0
             );
-            swayObject.transform.localRotation *= Quaternion.Euler(0, 0, rotationChange);
+            setup.swayObject.transform.localRotation *= Quaternion.Euler(0, 0, rotationChange);
         }
     }
 
@@ -251,22 +361,22 @@ public class WeaponBehavior : MonoBehaviour
         {
             if (currentAmmo > 0)
             {
-                weaponAnimator.Play("Fire", 0, 0.0f);
-                if (gunshotSound && audioSource)
+                setup.weaponAnimator.Play("Fire", 0, 0.0f);
+                if (setup.gunshotSound && audioSource)
                 {
                     audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f);
-                    audioSource.PlayOneShot(gunshotSound);
+                    audioSource.PlayOneShot(setup.gunshotSound);
                 }
-                if (muzzleFlash)
+                if (setup.muzzleFlash)
                 {
-                    muzzleFlash.transform.localRotation = Quaternion.Euler(
+                    setup.muzzleFlash.transform.localRotation = Quaternion.Euler(
                         0f,
                         0f,
                         Random.Range(0f, 360f)
                     );
-                    muzzleFlash.Play();
+                    setup.muzzleFlash.Play();
                 }
-                if (muzzleLight)
+                if (setup.muzzleLight)
                 {
                     StopCoroutine("FlashMuzzleLight");
                     StartCoroutine(FlashMuzzleLight());
@@ -276,14 +386,13 @@ public class WeaponBehavior : MonoBehaviour
                 StartCoroutine(ResetFOVAfterDelay());
                 EjectShellCasing();
 
-                // Increase recoil amount
-                float recoilIncrement = isAiming ? recoilPenaltyADS : recoilPenaltyHip;
+                float recoilIncrement = isAiming
+                    ? shootingSettings.recoilPenaltyADS
+                    : shootingSettings.recoilPenaltyHip;
                 recoilAmount = Mathf.Min(
                     recoilAmount + recoilIncrement,
-                    maxSpread - GetCurrentBaseAccuracy()
+                    shootingSettings.maxRecoil
                 );
-
-                // Update last fire time
                 lastFireTime = Time.time;
 
                 Vector3 shootDirection = ApplySpread(mainCamera.transform.forward, currentSpread);
@@ -292,30 +401,28 @@ public class WeaponBehavior : MonoBehaviour
                         mainCamera.transform.position,
                         shootDirection,
                         out RaycastHit hit,
-                        range
+                        shootingSettings.range
                     )
                 )
                     HandleHit(hit);
             }
-            else if (emptyClickSound && audioSource)
-                audioSource.PlayOneShot(emptyClickSound);
+            else if (setup.emptyClickSound && audioSource)
+                audioSource.PlayOneShot(setup.emptyClickSound);
         }
     }
 
     private void HandleReloading()
     {
         if (
-            Input.GetKeyDown(KeyCode.R)
+            Input.GetKeyDown(KeyCode.R) // Only reload when pressing R
             && !isReloading
-            && currentAmmo < maxAmmoInMagazine
+            && currentAmmo < ammoSettings.maxAmmoInMagazine
             && totalAmmo > 0
         )
         {
-            if (isAiming)
-            {
-                isAiming = false;
-                weaponAnimator.SetBool("IsAiming", false);
-            }
+            isAiming = false;
+            setup.weaponAnimator.SetBool("IsAiming", false);
+
             StartCoroutine(Reload());
         }
     }
@@ -323,47 +430,55 @@ public class WeaponBehavior : MonoBehaviour
     private IEnumerator Reload()
     {
         isReloading = true;
-        weaponAnimator.SetBool("isReloading", true);
-        weaponAnimator.SetTrigger("Reload");
+        lockSlideDuringReload = true; // Lock slide updates during reload
+        setup.weaponAnimator.SetBool("isReloading", true);
+        setup.weaponAnimator.SetTrigger("Reload");
 
-        // Play reload sound
-        if (reloadSound && audioSource)
-        {
-            audioSource.PlayOneShot(reloadSound);
-        }
+        // Turn off slide held back as soon as reloading starts
+        setup.weaponAnimator.SetBool("IsSlideHeldBack", false);
+
+        if (setup.reloadSound && audioSource)
+            audioSource.PlayOneShot(setup.reloadSound);
 
         yield return new WaitUntil(
-            () => weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Reload")
+            () => setup.weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Reload")
         );
         yield return new WaitUntil(
-            () => weaponAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f
+            () => setup.weaponAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f
         );
 
-        int ammoToReload = Mathf.Min(maxAmmoInMagazine - currentAmmo, totalAmmo);
+        int ammoToReload = Mathf.Min(ammoSettings.maxAmmoInMagazine - currentAmmo, totalAmmo);
         currentAmmo += ammoToReload;
         totalAmmo -= ammoToReload;
         isReloading = false;
-        weaponAnimator.SetBool("isReloading", false);
+        lockSlideDuringReload = false; // Allow slide updates again after reload
+        setup.weaponAnimator.SetBool("isReloading", false);
+
+        UpdateSlidePosition(); // Ensure slide position is updated post-reload
     }
 
     private void EjectShellCasing()
     {
-        if (shellCasingPrefab && shellEjectionPoint)
+        if (setup.shellCasingPrefab && setup.shellEjectionPoint)
         {
             GameObject shell = Instantiate(
-                shellCasingPrefab,
-                shellEjectionPoint.position,
-                shellEjectionPoint.rotation
+                setup.shellCasingPrefab,
+                setup.shellEjectionPoint.position,
+                setup.shellEjectionPoint.rotation
             );
             Rigidbody shellRigidbody = shell.GetComponent<Rigidbody>();
             if (shellRigidbody)
             {
                 Vector3 ejectDirection =
                     (
-                        shellEjectionPoint.transform.right + shellEjectionPoint.transform.up
+                        setup.shellEjectionPoint.transform.right
+                        + setup.shellEjectionPoint.transform.up
                     ).normalized
                     + Random.insideUnitSphere * 0.1f;
-                shellRigidbody.AddForce(ejectDirection * shellEjectionForce, ForceMode.Impulse);
+                shellRigidbody.AddForce(
+                    ejectDirection * setup.shellEjectionForce,
+                    ForceMode.Impulse
+                );
                 shellRigidbody.AddTorque(Random.insideUnitSphere, ForceMode.Impulse);
             }
         }
@@ -371,8 +486,11 @@ public class WeaponBehavior : MonoBehaviour
 
     private void HandleAiming()
     {
-        isAiming = !isReloading && Input.GetMouseButton(1);
-        weaponAnimator.SetBool("IsAiming", isAiming);
+        if (isReloading)
+            return;
+
+        isAiming = Input.GetMouseButton(1);
+        setup.weaponAnimator.SetBool("IsAiming", isAiming);
     }
 
     private void UpdateCameraAndWeaponPosition()
@@ -382,27 +500,30 @@ public class WeaponBehavior : MonoBehaviour
         Quaternion targetRotation = Quaternion.identity;
         if (isAiming && !isReloading)
         {
-            desiredFOV -= adsZoomAmount;
-            targetPosition = aimPosition;
-            targetRotation = aimRotation;
+            desiredFOV -= ads.adsZoomAmount;
+            targetPosition = ads.aimPosition;
+            targetRotation = ads.aimRotation;
         }
         if (isFiring)
-            desiredFOV += isAiming ? fovChangeAmountADS : fovChangeAmountHipFire;
+            desiredFOV += isAiming
+                ? fovSettings.fovChangeAmountADS
+                : fovSettings.fovChangeAmountHipFire;
+
         transform.localPosition = Vector3.Lerp(
             transform.localPosition,
             targetPosition,
-            Time.deltaTime * adsSpeed
+            Time.deltaTime * ads.adsSpeed
         );
         transform.localRotation = Quaternion.Slerp(
             transform.localRotation,
             targetRotation,
-            Time.deltaTime * adsSpeed
+            Time.deltaTime * ads.adsSpeed
         );
         if (mainCamera != null)
             mainCamera.fieldOfView = Mathf.Lerp(
                 mainCamera.fieldOfView,
                 desiredFOV,
-                Time.deltaTime * fovChangeSpeedShared
+                Time.deltaTime * fovSettings.fovChangeSpeedShared
             );
     }
 
@@ -414,9 +535,9 @@ public class WeaponBehavior : MonoBehaviour
 
     private IEnumerator FlashMuzzleLight()
     {
-        muzzleLight.enabled = true;
+        setup.muzzleLight.enabled = true;
         yield return new WaitForSeconds(0.1f);
-        muzzleLight.enabled = false;
+        setup.muzzleLight.enabled = false;
     }
 
     private Vector3 ApplySpread(Vector3 direction, float spreadAngle)
@@ -434,16 +555,18 @@ public class WeaponBehavior : MonoBehaviour
     {
         Health targetHealth = hit.collider.GetComponent<Health>();
         if (targetHealth)
-            targetHealth.TakeDamage(damage);
+            targetHealth.TakeDamage(setup.damage);
+
         string hitTag = hit.collider.tag;
         GameObject particleToSpawn =
             hitTag == "Metal"
-                ? metalHitParticle
+                ? hitParticles.metalHitParticle
                 : hitTag == "Dirt"
-                    ? dirtHitParticle
+                    ? hitParticles.dirtHitParticle
                     : hitTag == "Flesh"
-                        ? fleshHitParticle
-                        : defaultHitParticle;
+                        ? hitParticles.fleshHitParticle
+                        : hitParticles.defaultHitParticle;
+
         if (particleToSpawn)
         {
             GameObject hitParticle = Instantiate(
@@ -455,5 +578,23 @@ public class WeaponBehavior : MonoBehaviour
         }
     }
 
-    private float GetCurrentBaseAccuracy() => isAiming ? baseAccuracyADS : baseAccuracyHip;
+    private float GetCurrentBaseAccuracy() =>
+        isAiming ? shootingSettings.baseAccuracyADS : shootingSettings.baseAccuracyHip;
+
+    private void UpdateSlidePosition()
+    {
+        if (setup.weaponAnimator == null)
+        {
+            Debug.LogError("Weapon Animator is not assigned.");
+            return;
+        }
+
+        if (lockSlideDuringReload)
+            return;
+
+        if (currentAmmo <= 0)
+            setup.weaponAnimator.SetBool("IsSlideHeldBack", true);
+        else
+            setup.weaponAnimator.SetBool("IsSlideHeldBack", false);
+    }
 }
