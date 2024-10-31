@@ -13,11 +13,10 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _DETAIL
-  - _LIGHTMAPMODE_STANDARD
   - _NORMALMAP
-  - _TRIPLANAR
-  - _USEBRIGHTNESSCONTRAST
+  - _PACKEDFAST
+  - _PARALLAX
+  - _STOCHASTIC
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -30,8 +29,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlbedoMap:
-        m_Texture: {fileID: 2800000, guid: fa6dfd9d967900a498d244ab2c9ee8bf, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
+        m_Texture: {fileID: 2800000, guid: f6f4916e1f5d242fb875fe691f7c4682, type: 3}
+        m_Scale: {x: 668.15, y: 700}
         m_Offset: {x: 0, y: 0}
     - _AlbedoMap_P1:
         m_Texture: {fileID: 0}
@@ -70,8 +69,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMap:
-        m_Texture: {fileID: 2800000, guid: ec3569c13f22748f49ea97be722ebd54, type: 3}
-        m_Scale: {x: 30, y: 30}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMap_P1:
         m_Texture: {fileID: 0}
@@ -538,7 +537,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: deca43a3290ee2245be3ea72481803c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 847f7d1f11d25429794a86e35125e7e1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap_P1:
@@ -686,7 +685,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WindParticulate:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9b492051541d14c15b479ae7ecd573cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -706,7 +705,7 @@ Material:
     - _6SidedAngleContrast: 2
     - _AddPrecomputedVelocity: 0
     - _AlbedoBrightness: 0
-    - _AlbedoContrast: 0.5
+    - _AlbedoContrast: 1
     - _AlbedoHue: 0
     - _AlbedoSaturation: 1
     - _AlphaThreshold: 0
@@ -718,11 +717,11 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 1
     - _CullMode: 2
-    - _Cutoff: 0
+    - _Cutoff: 0.5
     - _DebugSampleCountThreshold: 12
-    - _DetailAlbedoStrength: 0.57
-    - _DetailNormalStrength: 0.07
-    - _DetailSmoothnessStrength: 0.59
+    - _DetailAlbedoStrength: 1
+    - _DetailNormalStrength: 1
+    - _DetailSmoothnessStrength: 1
     - _DetailStochasticContrast: 0.7
     - _DetailStochasticScale: 0.5
     - _DetailTriplanarBaryBlend: 0.9
@@ -731,6 +730,7 @@ Material:
     - _DetailUVSource: 0
     - _DisableDecals: 0
     - _DisableSSR: 0
+    - _DisplacementStrength: 1
     - _DissolveAmount: 0
     - _DissolveColoration: 1
     - _DissolveEdgeContrast: 10
@@ -902,11 +902,11 @@ Material:
     - _LayerVertexNormalBlend_Ext_3: 0.8
     - _Metallic: 0
     - _MicroShadowStrength: 0
-    - _NormalStrength: 0.5
+    - _NormalStrength: 1
     - _POMFade: 25
     - _POMMaxSamples: 8
     - _POMMin: 25
-    - _ParallaxHeight: 0
+    - _ParallaxHeight: 0.044
     - _Porosity: 0.4
     - _PuddleAmount: 0
     - _PuddleAngleMin: 0.1
@@ -936,16 +936,21 @@ Material:
     - _SnowStochasticContrast: 0.7
     - _SnowStochasticScale: 1
     - _SnowUseEffector: 0
-    - _SnowVertexHeight: 0
+    - _SnowVertexHeight: 0.05
     - _SpecularAAScreenSpaceVariance: 0.2
     - _SpecularAAThreshold: 0.1
     - _Stiffness: 1
-    - _StochasticContrast: 0.7
-    - _StochasticScale: 0.5
+    - _StochasticContrast: 0.5
+    - _StochasticScale: 0.75
     - _TerrainAlbedoProvided: 0
     - _TerrainBlendHeight: 0.2
     - _TerrainHeightProvided: 0
     - _TerrainYOffset: 0
+    - _TessellationDisplacement: 0.07
+    - _TessellationMaxSubdiv: 16
+    - _TessellationMinEdgeLength: 12
+    - _TessellationMipBias: 1
+    - _TessellationOffset: 0.5
     - _TraxDisplacementDepth: 0.1
     - _TraxDisplacementStrength: 0.2
     - _TraxHeightContrast: 0.5
@@ -956,7 +961,7 @@ Material:
     - _TriplanarContrast: 4
     - _TriplanarSpace: 0
     - _UVSource: 0
-    - _Version: 0
+    - _Version: 2021
     - _WetnessAmount: 0
     - _WetnessAngleMin: -1
     - _WetnessEffectorInvert: 0
@@ -967,12 +972,12 @@ Material:
     - _WetnessShoreline: -99999
     - _WetnessUseEffector: 0
     - _WindParticulateOcclusionStrength: 1
-    - _WindParticulatePower: 1
+    - _WindParticulatePower: 1.55
     - _WindParticulateRotation: 0
     - _WindParticulateSpace: 0
     - _WindParticulateSpeed: 1
-    - _WindParticulateStrength: 2
-    - _WindParticulateTextureHeight: 1
+    - _WindParticulateStrength: 1
+    - _WindParticulateTextureHeight: 0.257
     - _WireEffectorInvert: 0
     - _WireSmoothing: 0.5
     - _WireThickness: 0.5
@@ -1004,7 +1009,7 @@ Material:
     - _ColorZRange: {r: 0, g: 1, b: 0, a: 0}
     - _DetailTextureRotation: {r: 0, g: 0, b: 0, a: 0}
     - _DitherAlphaDistance: {r: 1, g: 50, b: 0, a: 50}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelBSP: {r: 0, g: 9, b: 3, a: 0}
     - _FresnelColor: {r: 0, g: 0, b: 0, a: 0}
     - _FuzzyShadingColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1081,9 +1086,9 @@ Material:
     - _LayerWeightOverDistance_Ext_2: {r: 1, g: 1, b: 1, a: 1}
     - _LayerWeightOverDistance_Ext_3: {r: 1, g: 1, b: 1, a: 1}
     - _MetallicRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _PuddleColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 0.95}
+    - _PuddleColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.7}
     - _RColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _RainIntensityScale: {r: 1, g: 25, b: 0, a: 400}
+    - _RainIntensityScale: {r: 1, g: 25, b: 0, a: 0}
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SnowFresnelBSP: {r: 0, g: 9, b: 3, a: 0}
     - _SnowFresnelColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1091,10 +1096,11 @@ Material:
     - _SnowTint: {r: 1, g: 1, b: 1, a: 1}
     - _SnowTraxTint: {r: 1, g: 1, b: 1, a: 1}
     - _SnowWorldFade: {r: 100, g: 50, b: 0, a: 0}
-    - _SparkleTCI: {r: 1, g: 0.7, b: 0.94, a: 0}
+    - _SparkleTCI: {r: 1, g: 0.7, b: 1, a: 0}
     - _SpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _TerrainPosition: {r: 0, g: 0, b: 0, a: 0}
     - _TerrainSize: {r: 0, g: 0, b: 0, a: 0}
+    - _TessellationDistanceRange: {r: 30, g: 20, b: 0, a: 0}
     - _TextureClampNX: {r: 0.001, g: 0.999, b: 0.001, a: 0.999}
     - _TextureClampNY: {r: 0.001, g: 0.999, b: 0.001, a: 0.999}
     - _TextureClampNZ: {r: 0.001, g: 0.999, b: 0.001, a: 0.999}
@@ -1105,7 +1111,7 @@ Material:
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _TraxTint: {r: 1, g: 1, b: 1, a: 1}
     - _WindParticulateAngleMask: {r: -1, g: -1, b: 1, a: 1}
-    - _WindParticulateColor: {r: 1, g: 1, b: 1, a: 1}
+    - _WindParticulateColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
     - _WindParticulateEmissive: {r: 0, g: 0, b: 0, a: 0}
     - _WindParticulateWorldHeightMask: {r: -99999, g: -99999, b: 99999, a: 99999}
     - _WireColor: {r: 0, g: 1, b: 0, a: 1}

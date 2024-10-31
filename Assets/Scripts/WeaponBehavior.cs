@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering.Universal;
 using TMPro;
 
 public class WeaponBehavior : MonoBehaviour
@@ -73,6 +74,7 @@ public class WeaponBehavior : MonoBehaviour
         public float recoilResetTime = 5f;
         public float recoilRecoveryDelay = 0.5f;
         public float maxRecoil = 3f;
+        public float deformationRadius = 0.5f;
     }
 
     [System.Serializable]
@@ -93,16 +95,27 @@ public class WeaponBehavior : MonoBehaviour
     [System.Serializable]
     public class HitParticles
     {
-        public GameObject metalHitParticle,
-            dirtHitParticle,
-            fleshHitParticle,
-            defaultHitParticle;
+        public GameObject concreteHitParticle;
+        public GameObject metalHitParticle;
+        public GameObject woodHitParticle;
+        public GameObject dirtHitParticle;
+        public GameObject fleshHitParticle;
+        public GameObject defaultHitParticle;
     }
 
     [System.Serializable]
     public class HUDSettings
     {
         public TextMeshProUGUI ammoText;
+    }
+
+    [System.Serializable]
+    public class DecalSettings
+    {
+        public GameObject concreteDecalPrefab;
+        public GameObject genericDecalPrefab;
+        public GameObject metalDecalPrefab;
+        public GameObject woodDecalPrefab;
     }
 
     [Header("Setup")]
@@ -156,6 +169,9 @@ public class WeaponBehavior : MonoBehaviour
 
     [Header("HUD")]
     public HUDSettings hudSettings = new HUDSettings();
+
+    [Header("Decals")]
+    public DecalSettings decals = new DecalSettings();
 
     private int currentAmmo,
         totalAmmo;
@@ -553,10 +569,7 @@ public class WeaponBehavior : MonoBehaviour
 
     private void HandleHit(RaycastHit hit)
     {
-        Health targetHealth = hit.collider.GetComponent<Health>();
-        if (targetHealth)
-            targetHealth.TakeDamage(setup.damage);
-
+        // === Spawn Hit Particle Effect ===
         string hitTag = hit.collider.tag;
         GameObject particleToSpawn =
             hitTag == "Metal"
@@ -567,15 +580,71 @@ public class WeaponBehavior : MonoBehaviour
                         ? hitParticles.fleshHitParticle
                         : hitParticles.defaultHitParticle;
 
-        if (particleToSpawn)
+        if (particleToSpawn != null)
         {
             GameObject hitParticle = Instantiate(
                 particleToSpawn,
                 hit.point,
                 Quaternion.LookRotation(hit.normal)
             );
-            Destroy(hitParticle, 2f);
+            Destroy(hitParticle, 2f); // Destroy particle after 2 seconds to avoid clutter
         }
+
+        // === Apply Bullet Hole Decal ===
+        GameObject selectedDecalPrefab = hitTag switch
+        {
+            "Concrete" => decals.concreteDecalPrefab,
+            "Metal" => decals.metalDecalPrefab,
+            "Wood" => decals.woodDecalPrefab,
+            _ => decals.genericDecalPrefab // Use generic as fallback for unassigned tags
+        };
+
+        if (selectedDecalPrefab != null)
+        {
+            Vector3 decalPosition = hit.point + hit.normal * 0.01f; // Offset to avoid Z-fighting
+            Quaternion decalRotation =
+                Quaternion.LookRotation(-hit.normal) * Quaternion.Euler(0, 0, Random.Range(0, 360));
+
+            GameObject decal = Instantiate(selectedDecalPrefab, decalPosition, decalRotation);
+            decal.transform.SetParent(hit.collider.transform); // Parent decal to the hit object
+
+            // Start fade-out coroutine for the decal after 10 seconds
+            StartCoroutine(FadeOutAndDestroy(decal, 10f, 10f));
+        }
+
+        // === Apply Damage or Other Effects ===
+        DynamicDestructibleObject destructible =
+            hit.collider.GetComponentInParent<DynamicDestructibleObject>();
+        if (destructible)
+        {
+            destructible.ApplyBulletHole(hit.point); // Apply destructible effects
+        }
+        else
+        {
+            Health targetHealth = hit.collider.GetComponent<Health>();
+            if (targetHealth)
+            {
+                targetHealth.TakeDamage(setup.damage); // Apply damage to health
+            }
+        }
+    }
+
+    private IEnumerator FadeOutAndDestroy(GameObject decal, float delay, float fadeDuration)
+    {
+        yield return new WaitForSeconds(delay); // Wait for 10 seconds before fading
+
+        var projector = decal.GetComponent<DecalProjector>();
+        if (projector != null)
+        {
+            for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+            {
+                projector.fadeFactor = Mathf.Lerp(1f, 0f, t / fadeDuration);
+                yield return null;
+            }
+            projector.fadeFactor = 0f; // Ensure fadeFactor is fully set to 0 at the end
+        }
+
+        Destroy(decal); // Destroy the decal after fade-out
     }
 
     private float GetCurrentBaseAccuracy() =>
