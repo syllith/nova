@@ -20,6 +20,7 @@ public class WeaponBehavior : MonoBehaviour
         public Transform shellEjectionPoint;
         public float shellEjectionForce = 3.3f;
         public CrosshairManager crosshairManager;
+        public Transform bulletOrigin;
     }
 
     [System.Serializable]
@@ -185,6 +186,7 @@ public class WeaponBehavior : MonoBehaviour
         targetSwayRotation;
     private SwaySettings currentSwaySettings;
     private AudioSource audioSource;
+    private LineRenderer bulletTracer;
 
     private void Start()
     {
@@ -210,6 +212,12 @@ public class WeaponBehavior : MonoBehaviour
 
         if (hudSettings.ammoText == null)
             Debug.LogError("Ammo Text UI element is not assigned in HUD Settings.");
+
+        bulletTracer = GetComponent<LineRenderer>();
+        if (bulletTracer != null)
+        {
+            bulletTracer.enabled = false; // Hide initially
+        }
     }
 
     private void Update()
@@ -392,15 +400,44 @@ public class WeaponBehavior : MonoBehaviour
         ApplyRecoil();
 
         Vector3 shootDirection = ApplySpread(mainCamera.transform.forward, currentSpread);
+
+        // Use the camera's position for the actual bullet (raycast)
+        Vector3 raycastStartPoint = mainCamera.transform.position;
+        Vector3 endPoint = raycastStartPoint + (shootDirection * shootingSettings.range);
+
         if (
             Physics.Raycast(
-                mainCamera.transform.position,
+                raycastStartPoint,
                 shootDirection,
                 out RaycastHit hit,
                 shootingSettings.range
             )
         )
+        {
+            endPoint = hit.point;
             HandleHit(hit);
+        }
+
+        // Use the bulletOrigin for the visual bullet tracer
+        Vector3 tracerStartPoint = setup.bulletOrigin
+            ? setup.bulletOrigin.position
+            : mainCamera.transform.position;
+
+        if (bulletTracer != null)
+        {
+            StartCoroutine(DisplayBulletTracer(tracerStartPoint, endPoint));
+        }
+    }
+
+    private IEnumerator DisplayBulletTracer(Vector3 start, Vector3 end)
+    {
+        bulletTracer.enabled = true;
+        bulletTracer.SetPosition(0, start);
+        bulletTracer.SetPosition(1, end);
+
+        yield return new WaitForSeconds(0.05f); // Adjust duration as needed
+
+        bulletTracer.enabled = false;
     }
 
     private void PlayGunshotEffects()

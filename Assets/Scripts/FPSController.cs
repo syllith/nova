@@ -48,7 +48,8 @@ public class FPSController : MonoBehaviour
     public float baseStepIntervalWalking = 0.5f;
     public float baseStepIntervalRunning = 0.3f;
 
-    private Dictionary<string, FootstepSound> footstepSoundsDict = new Dictionary<string, FootstepSound>();
+    private Dictionary<string, FootstepSound> footstepSoundsDict =
+        new Dictionary<string, FootstepSound>();
     private float footstepTimer = 0f;
     private float footstepInterval;
 
@@ -145,7 +146,11 @@ public class FPSController : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
 
         // Footstep sound logic
-        float currentSpeed = new Vector3(characterController.velocity.x, 0, characterController.velocity.z).magnitude;
+        float currentSpeed = new Vector3(
+            characterController.velocity.x,
+            0,
+            characterController.velocity.z
+        ).magnitude;
 
         if (characterController.isGrounded && currentSpeed > 0.1f && canMove && footstepTimer <= 0f)
         {
@@ -346,12 +351,11 @@ public class FPSController : MonoBehaviour
         Crouching
     }
 
-    // Expose the current movement state
     public MovementState CurrentMovementState
     {
         get
         {
-            if (isCrouching && canMove && characterController.velocity.magnitude >= 0.1f)
+            if (isCrouching)
             {
                 return MovementState.Crouching;
             }
