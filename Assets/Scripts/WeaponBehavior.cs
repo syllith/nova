@@ -1,7 +1,7 @@
 using UnityEngine;
-using System.Collections;
-using UnityEngine.Rendering.Universal;
 using TMPro;
+using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 public class WeaponBehavior : MonoBehaviour
 {
@@ -14,9 +14,7 @@ public class WeaponBehavior : MonoBehaviour
             emptyClickSound;
         public ParticleSystem muzzleFlash;
         public Light muzzleLight;
-        public GameObject swayObject,
-            slideObject;
-        public int damage = 60;
+        public GameObject swayObject;
         public FPSController playerController;
         public GameObject shellCasingPrefab;
         public Transform shellEjectionPoint;
@@ -29,9 +27,8 @@ public class WeaponBehavior : MonoBehaviour
     {
         public float adsSpeed = 15f;
         public float adsZoomAmount = 40f;
-        public float adsZoomSpeed = 15f;
         public Vector3 aimPosition = new Vector3(0.2277f, 0.0755f, 0.0999f);
-        public Quaternion aimRotation = Quaternion.Euler(355.605f, 359.595f, 0f);
+        public Quaternion aimRotation = Quaternion.Euler(355.65f, 359.92f, 2f); // Updated for exact rotation
     }
 
     [System.Serializable]
@@ -60,7 +57,7 @@ public class WeaponBehavior : MonoBehaviour
     public class AmmoSettings
     {
         public int maxAmmoInMagazine = 7;
-        public int maxTotalAmmo = 14;
+        public int maxTotalAmmo = 50; // Updated to match screenshot
     }
 
     [System.Serializable]
@@ -69,27 +66,24 @@ public class WeaponBehavior : MonoBehaviour
         public float range = 100f;
         public float baseAccuracyHip = 1f;
         public float baseAccuracyADS = 0.5f;
-        public float recoilPenaltyHip = 0.5f;
-        public float recoilPenaltyADS = 0.25f;
-        public float recoilResetTime = 5f;
-        public float recoilRecoveryDelay = 0.5f;
-        public float maxRecoil = 3f;
-        public float deformationRadius = 0.5f;
+        public float recoilPenaltyHip = 1f; // Updated to match screenshot
+        public float recoilPenaltyADS = 0.5f; // Updated to match screenshot
+        public float recoilResetTime = 0.15f; // Updated to match screenshot
+        public float recoilRecoveryDelay = 0.15f; // Updated to match screenshot
+        public float maxRecoil = 1.5f; // Updated to match screenshot
     }
 
     [System.Serializable]
     public class MovementSpreadSettings
     {
-        public float standingBaseSpread = 1f;
-        public float walkingBaseSpread = 2f;
-        public float runningBaseSpread = 4f;
-        public float crouchingBaseSpread = 0.5f;
-
-        // New settings for ADS
-        public float standingADSBaseSpread = 0.5f;
-        public float walkingADSBaseSpread = 1f;
-        public float runningADSBaseSpread = 2f;
-        public float crouchingADSBaseSpread = 0.25f;
+        public float standingBaseSpread = 3f; // Updated to match screenshot
+        public float walkingBaseSpread = 7f; // Updated to match screenshot
+        public float runningBaseSpread = 8f; // Updated to match screenshot
+        public float crouchingBaseSpread = 2f; // Updated to match screenshot
+        public float standingADSBaseSpread = 3f; // Updated to match screenshot
+        public float walkingADSBaseSpread = 2f; // Updated to match screenshot
+        public float runningADSBaseSpread = 4f; // Updated to match screenshot
+        public float crouchingADSBaseSpread = 0.25f; // Updated to match screenshot
     }
 
     [System.Serializable]
@@ -186,8 +180,7 @@ public class WeaponBehavior : MonoBehaviour
         recoilAmount,
         lastFireTime;
     private Vector3 initialSwayPosition,
-        targetSwayPosition,
-        slideOriginalPosition;
+        targetSwayPosition;
     private Quaternion initialSwayRotation,
         targetSwayRotation;
     private SwaySettings currentSwaySettings;
@@ -205,10 +198,8 @@ public class WeaponBehavior : MonoBehaviour
         totalAmmo = ammoSettings.maxTotalAmmo;
         currentSpread = GetCurrentBaseAccuracy();
 
-        if (setup.slideObject != null)
-            slideOriginalPosition = setup.slideObject.transform.localPosition;
-        else
-            Debug.LogError("Slide Object is not assigned.");
+        if (setup.weaponAnimator == null)
+            Debug.LogError("Weapon Animator is not assigned.");
 
         if (setup.crosshairManager == null)
         {
@@ -218,9 +209,7 @@ public class WeaponBehavior : MonoBehaviour
         }
 
         if (hudSettings.ammoText == null)
-        {
             Debug.LogError("Ammo Text UI element is not assigned in HUD Settings.");
-        }
     }
 
     private void Update()
@@ -236,6 +225,15 @@ public class WeaponBehavior : MonoBehaviour
             HandleBob();
         }
 
+        UpdateRecoil();
+        UpdateSpread();
+        UpdateCrosshair();
+        UpdateSlidePosition();
+        UpdateHUD();
+    }
+
+    private void UpdateRecoil()
+    {
         if (recoilAmount > 0)
         {
             float timeSinceLastShot = Time.time - lastFireTime;
@@ -249,25 +247,26 @@ public class WeaponBehavior : MonoBehaviour
                 recoilAmount = Mathf.Max(recoilAmount - recoilRecoveryRate, 0f);
             }
         }
+    }
 
+    private void UpdateSpread()
+    {
         float movementSpreadValue = GetBaseSpreadForCurrentMovementState();
         currentSpread = movementSpreadValue + recoilAmount;
         float maxTotalSpread = movementSpreadValue + shootingSettings.maxRecoil;
         currentSpread = Mathf.Min(currentSpread, maxTotalSpread);
+    }
 
+    private void UpdateCrosshair()
+    {
         if (setup.crosshairManager != null)
             setup.crosshairManager.UpdateCrosshair(currentSpread, isAiming, isReloading);
-
-        UpdateSlidePosition();
-        UpdateHUD();
     }
 
     private void UpdateHUD()
     {
         if (hudSettings.ammoText != null)
-        {
             hudSettings.ammoText.text = $"{currentAmmo} / {totalAmmo}";
-        }
     }
 
     private float GetBaseSpreadForCurrentMovementState()
@@ -320,11 +319,9 @@ public class WeaponBehavior : MonoBehaviour
             currentSwaySettings.maxAmount
         );
         targetSwayRotation = Quaternion.Euler(
-            new Vector3(
-                factorY,
-                factorX * currentSwaySettings.yRotationFactor,
-                -factorX * currentSwaySettings.rotationFactor
-            )
+            factorY,
+            factorX * currentSwaySettings.yRotationFactor,
+            -factorX * currentSwaySettings.rotationFactor
         );
         targetSwayPosition = new Vector3(factorX, factorY, 0);
         setup.swayObject.transform.localRotation = Quaternion.Slerp(
@@ -377,60 +374,71 @@ public class WeaponBehavior : MonoBehaviour
         {
             if (currentAmmo > 0)
             {
-                setup.weaponAnimator.Play("Fire", 0, 0.0f);
-                if (setup.gunshotSound && audioSource)
-                {
-                    audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f);
-                    audioSource.PlayOneShot(setup.gunshotSound);
-                }
-                if (setup.muzzleFlash)
-                {
-                    setup.muzzleFlash.transform.localRotation = Quaternion.Euler(
-                        0f,
-                        0f,
-                        Random.Range(0f, 360f)
-                    );
-                    setup.muzzleFlash.Play();
-                }
-                if (setup.muzzleLight)
-                {
-                    StopCoroutine("FlashMuzzleLight");
-                    StartCoroutine(FlashMuzzleLight());
-                }
-                currentAmmo--;
-                isFiring = true;
-                StartCoroutine(ResetFOVAfterDelay());
-                EjectShellCasing();
-
-                float recoilIncrement = isAiming
-                    ? shootingSettings.recoilPenaltyADS
-                    : shootingSettings.recoilPenaltyHip;
-                recoilAmount = Mathf.Min(
-                    recoilAmount + recoilIncrement,
-                    shootingSettings.maxRecoil
-                );
-                lastFireTime = Time.time;
-
-                Vector3 shootDirection = ApplySpread(mainCamera.transform.forward, currentSpread);
-                if (
-                    Physics.Raycast(
-                        mainCamera.transform.position,
-                        shootDirection,
-                        out RaycastHit hit,
-                        shootingSettings.range
-                    )
-                )
-                    HandleHit(hit);
+                FireWeapon();
             }
             else if (setup.emptyClickSound && audioSource)
                 audioSource.PlayOneShot(setup.emptyClickSound);
         }
     }
 
+    private void FireWeapon()
+    {
+        setup.weaponAnimator.Play("Fire", 0, 0.0f);
+        PlayGunshotEffects();
+        currentAmmo--;
+        isFiring = true;
+        StartCoroutine(ResetFOVAfterDelay());
+        EjectShellCasing();
+        ApplyRecoil();
+
+        Vector3 shootDirection = ApplySpread(mainCamera.transform.forward, currentSpread);
+        if (
+            Physics.Raycast(
+                mainCamera.transform.position,
+                shootDirection,
+                out RaycastHit hit,
+                shootingSettings.range
+            )
+        )
+            HandleHit(hit);
+    }
+
+    private void PlayGunshotEffects()
+    {
+        if (setup.gunshotSound && audioSource)
+        {
+            audioSource.pitch = 1.0f + Random.Range(-0.05f, 0.05f);
+            audioSource.PlayOneShot(setup.gunshotSound);
+        }
+        if (setup.muzzleFlash)
+        {
+            setup.muzzleFlash.transform.localRotation = Quaternion.Euler(
+                0f,
+                0f,
+                Random.Range(0f, 360f)
+            );
+            setup.muzzleFlash.Play();
+        }
+        if (setup.muzzleLight)
+        {
+            StopCoroutine("FlashMuzzleLight");
+            StartCoroutine(FlashMuzzleLight());
+        }
+    }
+
+    private void ApplyRecoil()
+    {
+        float recoilIncrement = isAiming
+            ? shootingSettings.recoilPenaltyADS
+            : shootingSettings.recoilPenaltyHip;
+        recoilAmount = Mathf.Min(recoilAmount + recoilIncrement, shootingSettings.maxRecoil);
+        lastFireTime = Time.time;
+    }
+
     private void HandleReloading()
     {
         if (
-            Input.GetKeyDown(KeyCode.R) // Only reload when pressing R
+            Input.GetKeyDown(KeyCode.R)
             && !isReloading
             && currentAmmo < ammoSettings.maxAmmoInMagazine
             && totalAmmo > 0
@@ -438,7 +446,6 @@ public class WeaponBehavior : MonoBehaviour
         {
             isAiming = false;
             setup.weaponAnimator.SetBool("IsAiming", false);
-
             StartCoroutine(Reload());
         }
     }
@@ -446,11 +453,10 @@ public class WeaponBehavior : MonoBehaviour
     private IEnumerator Reload()
     {
         isReloading = true;
-        lockSlideDuringReload = true; // Lock slide updates during reload
+        lockSlideDuringReload = true;
         setup.weaponAnimator.SetBool("isReloading", true);
         setup.weaponAnimator.SetTrigger("Reload");
 
-        // Turn off slide held back as soon as reloading starts
         setup.weaponAnimator.SetBool("IsSlideHeldBack", false);
 
         if (setup.reloadSound && audioSource)
@@ -467,10 +473,10 @@ public class WeaponBehavior : MonoBehaviour
         currentAmmo += ammoToReload;
         totalAmmo -= ammoToReload;
         isReloading = false;
-        lockSlideDuringReload = false; // Allow slide updates again after reload
+        lockSlideDuringReload = false;
         setup.weaponAnimator.SetBool("isReloading", false);
 
-        UpdateSlidePosition(); // Ensure slide position is updated post-reload
+        UpdateSlidePosition();
     }
 
     private void EjectShellCasing()
@@ -569,16 +575,18 @@ public class WeaponBehavior : MonoBehaviour
 
     private void HandleHit(RaycastHit hit)
     {
-        // === Spawn Hit Particle Effect ===
         string hitTag = hit.collider.tag;
-        GameObject particleToSpawn =
-            hitTag == "Metal"
-                ? hitParticles.metalHitParticle
-                : hitTag == "Dirt"
-                    ? hitParticles.dirtHitParticle
-                    : hitTag == "Flesh"
-                        ? hitParticles.fleshHitParticle
-                        : hitParticles.defaultHitParticle;
+
+        // === Spawn Hit Particle Effect ===
+        GameObject particleToSpawn = hitTag switch
+        {
+            "Metal" => hitParticles.metalHitParticle,
+            "Dirt" => hitParticles.dirtHitParticle,
+            "Flesh" => hitParticles.fleshHitParticle,
+            "Concrete" => hitParticles.concreteHitParticle,
+            "Wood" => hitParticles.woodHitParticle,
+            _ => hitParticles.defaultHitParticle,
+        };
 
         if (particleToSpawn != null)
         {
@@ -587,7 +595,7 @@ public class WeaponBehavior : MonoBehaviour
                 hit.point,
                 Quaternion.LookRotation(hit.normal)
             );
-            Destroy(hitParticle, 2f); // Destroy particle after 2 seconds to avoid clutter
+            Destroy(hitParticle, 2f);
         }
 
         // === Apply Bullet Hole Decal ===
@@ -596,42 +604,25 @@ public class WeaponBehavior : MonoBehaviour
             "Concrete" => decals.concreteDecalPrefab,
             "Metal" => decals.metalDecalPrefab,
             "Wood" => decals.woodDecalPrefab,
-            _ => decals.genericDecalPrefab // Use generic as fallback for unassigned tags
+            _ => decals.genericDecalPrefab
         };
 
         if (selectedDecalPrefab != null)
         {
-            Vector3 decalPosition = hit.point + hit.normal * 0.01f; // Offset to avoid Z-fighting
+            Vector3 decalPosition = hit.point + hit.normal * 0.01f;
             Quaternion decalRotation =
                 Quaternion.LookRotation(-hit.normal) * Quaternion.Euler(0, 0, Random.Range(0, 360));
 
             GameObject decal = Instantiate(selectedDecalPrefab, decalPosition, decalRotation);
-            decal.transform.SetParent(hit.collider.transform); // Parent decal to the hit object
+            decal.transform.SetParent(hit.collider.transform);
 
-            // Start fade-out coroutine for the decal after 10 seconds
             StartCoroutine(FadeOutAndDestroy(decal, 10f, 10f));
-        }
-
-        // === Apply Damage or Other Effects ===
-        DynamicDestructibleObject destructible =
-            hit.collider.GetComponentInParent<DynamicDestructibleObject>();
-        if (destructible)
-        {
-            destructible.ApplyBulletHole(hit.point); // Apply destructible effects
-        }
-        else
-        {
-            Health targetHealth = hit.collider.GetComponent<Health>();
-            if (targetHealth)
-            {
-                targetHealth.TakeDamage(setup.damage); // Apply damage to health
-            }
         }
     }
 
     private IEnumerator FadeOutAndDestroy(GameObject decal, float delay, float fadeDuration)
     {
-        yield return new WaitForSeconds(delay); // Wait for 10 seconds before fading
+        yield return new WaitForSeconds(delay);
 
         var projector = decal.GetComponent<DecalProjector>();
         if (projector != null)
@@ -641,10 +632,10 @@ public class WeaponBehavior : MonoBehaviour
                 projector.fadeFactor = Mathf.Lerp(1f, 0f, t / fadeDuration);
                 yield return null;
             }
-            projector.fadeFactor = 0f; // Ensure fadeFactor is fully set to 0 at the end
+            projector.fadeFactor = 0f;
         }
 
-        Destroy(decal); // Destroy the decal after fade-out
+        Destroy(decal);
     }
 
     private float GetCurrentBaseAccuracy() =>
@@ -661,9 +652,6 @@ public class WeaponBehavior : MonoBehaviour
         if (lockSlideDuringReload)
             return;
 
-        if (currentAmmo <= 0)
-            setup.weaponAnimator.SetBool("IsSlideHeldBack", true);
-        else
-            setup.weaponAnimator.SetBool("IsSlideHeldBack", false);
+        setup.weaponAnimator.SetBool("IsSlideHeldBack", currentAmmo <= 0);
     }
 }
